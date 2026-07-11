@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rafael Nobre | Deputado Estadual · RJ</title>
+<meta name="description" content="Rafael Nobre, deputado estadual pelo Rio de Janeiro. Filho do Cabuís, em Nilópolis: o mais votado da história do município. Homem de palavra, trabalho de verdade.">
+<meta property="og:title" content="Rafael Nobre | Deputado Estadual · RJ">
+<meta property="og:description" content="Filho do Cabuís. Homem de palavra, trabalho de verdade.">
+<meta property="og:image" content="assets/logo-oficial.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='96' fill='%23012141'/%3E%3Cg stroke='%23C79A3D' fill='none' stroke-width='26'%3E%3Cpath d='M64 420 H448'/%3E%3Cpath d='M118 420 L158 168 L232 232'/%3E%3Cpath d='M394 420 L354 168 L280 232'/%3E%3Cpath d='M256 64 L336 144 L256 224 L176 144 Z'/%3E%3Cpath d='M256 268 L296 308 L256 348 L216 308 Z' stroke-width='24'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Baloo+2:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --marinho-profundo:#0B2440;
+  --marinho:#12385B;
+  --marinho-claro:#1E4E7A;
+  --ceu:#7FA8CC;
+  --ceu-claro:#A7C6E2;
+  --ouro:#C79A3D;
+  --ouro-quente:#E3B85C;
+  --branco:#FFFFFF;
+  --gelo:#F5F7F9;
+  --tinta:#1E2A38;
+  --tinta-suave:#4E617A;
+  --anton:'Anton',Impact,sans-serif;
+  --barlow:'Barlow',system-ui,sans-serif;
+  --cond:'Barlow Condensed',var(--barlow);
+  --baloo:'Baloo 2',var(--barlow);
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--barlow);color:var(--tinta);background:var(--branco);line-height:1.6;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+::selection{background:var(--ouro);color:var(--marinho-profundo)}
+
+/* ============ UTILITIES ============ */
+.eyebrow{
+  display:inline-block;font-family:var(--cond);font-weight:700;font-size:15px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--marinho-profundo);
+  background:var(--ceu);padding:5px 14px 4px;transform:rotate(-1.5deg);
+  border-radius:3px;box-shadow:3px 3px 0 rgba(11,36,64,.18);
+}
+.eyebrow--gold{background:var(--ouro)}
+.eyebrow--on-dark{box-shadow:3px 3px 0 rgba(0,0,0,.35)}
+h2.sec-title{
+  font-family:var(--anton);font-weight:400;text-transform:uppercase;
+  font-size:clamp(34px,5vw,58px);line-height:1.04;letter-spacing:.01em;
+  color:var(--marinho-profundo);margin:18px 0 14px;
+}
+.sec-title .tarja{
+  display:inline-block;background:var(--ouro);color:var(--marinho-profundo);
+  padding:0 12px 2px;transform:rotate(-1.2deg);border-radius:4px;
+}
+.sec-title .tarja--ceu{background:var(--ceu)}
+.sec-lead{font-size:18px;color:var(--tinta-suave);max-width:640px}
+.on-dark h2.sec-title{color:var(--branco)}
+.on-dark .sec-lead{color:#B9CBE0}
+
+/* scroll reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.reveal.is-in{opacity:1;transform:none}
+.reveal[data-delay="1"]{transition-delay:.12s}
+.reveal[data-delay="2"]{transition-delay:.24s}
+.reveal[data-delay="3"]{transition-delay:.36s}
+.reveal[data-delay="4"]{transition-delay:.48s}
+.reveal[data-delay="5"]{transition-delay:.6s}
+
+/* progress bar */
+#progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--ouro),var(--ouro-quente));z-index:1000}
+
+/* ============ NAV ============ */
+header.nav{
+  position:fixed;top:0;left:0;right:0;z-index:900;
+  background:rgba(11,36,64,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  transition:background .3s ease,box-shadow .3s ease;
+}
+header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:28px}
+.nav-logo img{height:54px;width:auto;border-radius:8px}
+.nav-links{display:flex;gap:26px;margin-left:auto;list-style:none}
+.nav-links a{
+  font-family:var(--cond);font-weight:600;font-size:16px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--branco);text-decoration:none;position:relative;padding:4px 0;
+}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:3px;background:var(--ouro);border-radius:2px;transition:width .25s ease}
+.nav-links a:hover::after,.nav-links a:focus-visible::after{width:100%}
+.nav-cta{
+  font-family:var(--cond);font-weight:700;font-size:16px;letter-spacing:.08em;text-transform:uppercase;
+  background:var(--ouro);color:var(--marinho-profundo);text-decoration:none;
+  padding:10px 18px;border-radius:6px;box-shadow:0 4px 0 rgba(0,0,0,.25);
+  transition:transform .15s ease,box-shadow .15s ease;white-space:nowrap;
+}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 0 rgba(0,0,0,.25)}
+.burger{display:none;margin-left:auto;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{display:block;width:26px;height:3px;background:var(--branco);margin:5px 0;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+.mobile-menu{display:none}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;min-height:100svh;display:flex;align-items:center;
+  background:
+    radial-gradient(1200px 600px at 80% -10%,rgba(127,168,204,.20),transparent 60%),
+    radial-gradient(900px 500px at -10% 110%,rgba(199,154,61,.14),transparent 55%),
+    linear-gradient(160deg,var(--marinho-profundo) 0%,var(--marinho) 70%,#0E2E4C 100%);
+  color:var(--branco);overflow:hidden;padding:130px 0 80px;
+}
+.hero::before{ /* halftone */
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.10) 1.1px,transparent 1.3px);
+  background-size:22px 22px;opacity:.5;pointer-events:none;
+  mask-image:linear-gradient(120deg,rgba(0,0,0,.9),transparent 65%);
+  -webkit-mask-image:linear-gradient(120deg,rgba(0,0,0,.9),transparent 65%);
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;position:relative;z-index:2}
+.hero-copy .eyebrow{margin-bottom:26px}
+.hero-name{
+  font-family:var(--anton);font-weight:400;text-transform:uppercase;
+  font-size:clamp(64px,11vw,150px);line-height:.92;letter-spacing:.005em;
+}
+.hero-name .l1{display:block;color:var(--branco)}
+.hero-name .l2{display:inline-block;margin-top:10px;background:var(--ouro);color:var(--marinho-profundo);
+  padding:2px 22px 6px;transform:rotate(-2deg);border-radius:6px;
+  box-shadow:8px 8px 0 rgba(0,0,0,.28);
+}
+.hero-slogan{
+  font-family:var(--baloo);font-weight:700;font-size:clamp(24px,3.2vw,36px);
+  color:var(--ouro-quente);margin:30px 0 10px;
+}
+.hero-sub{font-size:18px;max-width:520px;color:#C7D4E4}
+.hero-ctas{display:flex;gap:16px;margin-top:36px;flex-wrap:wrap}
+.btn{
+  font-family:var(--cond);font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  font-size:18px;text-decoration:none;padding:15px 28px;border-radius:8px;
+  transition:transform .15s ease,box-shadow .15s ease;display:inline-flex;align-items:center;gap:10px;
+}
+.btn-gold{background:var(--ouro);color:var(--marinho-profundo);box-shadow:0 5px 0 rgba(0,0,0,.3)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 8px 0 rgba(0,0,0,.3)}
+.btn-ghost{border:2px solid var(--ceu);color:var(--ceu-claro)}
+.btn-ghost:hover{background:rgba(127,168,204,.12);transform:translateY(-3px)}
+
+.hero-photo{position:relative;justify-self:center}
+.hero-badge{
+  position:absolute;left:-26px;bottom:38px;background:var(--branco);color:var(--marinho-profundo);
+  font-family:var(--baloo);font-weight:700;font-size:19px;padding:9px 18px;border-radius:999px;
+  transform:rotate(-4deg);box-shadow:5px 5px 0 rgba(0,0,0,.3);z-index:60;
+}
+.hero-badge b{color:var(--ouro)}
+/* skyline */
+.skyline{position:absolute;left:0;right:0;bottom:-2px;z-index:1;opacity:.5}
+.skyline svg{display:block;width:100%;height:110px}
+
+/* selo do número — dormente até o modo campanha */
+.numero-urna{
+  display:none;margin-top:30px;max-width:330px;text-align:center;
+  background:var(--ouro);color:var(--marinho-profundo);border-radius:12px;padding:16px 24px 12px;
+  transform:rotate(-1.5deg);box-shadow:6px 6px 0 rgba(0,0,0,.35);
+}
+.numero-urna .rotulo{display:block;font-family:var(--cond);font-weight:700;font-size:13px;letter-spacing:.24em;text-transform:uppercase}
+.numero-urna .num{display:block;font-family:var(--anton);font-size:56px;line-height:1.05}
+body.campanha .numero-urna{display:block}
+
+/* hero load animation */
+.rise{opacity:0;transform:translateY(40px);animation:rise .9s cubic-bezier(.2,.7,.25,1) forwards}
+.rise.d1{animation-delay:.1s}.rise.d2{animation-delay:.25s}.rise.d3{animation-delay:.4s}
+.rise.d4{animation-delay:.55s}.rise.d5{animation-delay:.7s}.rise.d6{animation-delay:.85s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* ============ TICKER ============ */
+.ticker{
+  background:var(--ouro);color:var(--marinho-profundo);overflow:hidden;
+  transform:rotate(-1.2deg) scale(1.02);margin:-26px 0 0;position:relative;z-index:5;
+  box-shadow:0 10px 30px rgba(11,36,64,.25);
+}
+.ticker-track{display:flex;width:max-content;animation:ticker 26s linear infinite;padding:13px 0}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker span{
+  font-family:var(--anton);font-size:22px;letter-spacing:.06em;text-transform:uppercase;
+  padding:0 26px;white-space:nowrap;
+}
+.ticker b{color:var(--marinho);font-weight:400}
+@keyframes ticker{to{transform:translateX(-50%)}}
+
+/* ============ NUMBERS ============ */
+.numbers{background:var(--gelo);padding:96px 0 84px}
+.num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:46px}
+.num-card{
+  background:var(--branco);border-radius:14px;padding:30px 26px 26px;position:relative;
+  border-top:6px solid var(--ouro);box-shadow:0 10px 30px rgba(30,42,56,.08);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.num-card:nth-child(2){border-top-color:var(--ceu)}
+.num-card:nth-child(3){border-top-color:var(--marinho)}
+.num-card:nth-child(4){border-top-color:var(--ouro)}
+.num-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(30,42,56,.14)}
+.num-value{font-family:var(--anton);font-size:clamp(40px,4.6vw,58px);color:var(--marinho-profundo);line-height:1}
+.num-label{font-family:var(--cond);font-weight:600;font-size:17px;letter-spacing:.06em;text-transform:uppercase;color:var(--tinta-suave);margin-top:10px}
+.num-note{font-size:14px;color:var(--tinta-suave);margin-top:26px}
+.num-note a{color:var(--marinho);font-weight:600}
+
+/* ============ BIO ============ */
+.bio{padding:110px 0;background:var(--branco);position:relative;overflow:hidden}
+.bio-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.bio-photo{position:relative}
+.bio-photo .frame{
+  border-radius:16px;overflow:hidden;transform:rotate(-1.8deg);
+  box-shadow:0 24px 50px rgba(30,42,56,.22);aspect-ratio:4/5;background:#012141;
+  display:flex;align-items:center;justify-content:center;
+}
+.bio-photo .frame img.foto-auto{width:100%;height:100%;object-fit:cover;object-position:center 12%}
+.bio-photo .frame img.logo-fill{width:82%;object-fit:contain;display:none}
+.bio-photo .frame.sem-foto img.foto-auto{display:none}
+.bio-photo .frame.sem-foto img.logo-fill{display:block}
+.bio-photo::after{
+  content:"";position:absolute;inset:auto -16px -16px auto;width:58%;height:58%;
+  background:repeating-linear-gradient(45deg,var(--ouro) 0 6px,transparent 6px 14px);
+  border-radius:14px;z-index:-1;opacity:.5;
+}
+.bio p{margin-bottom:16px;font-size:17.5px}
+.bio p strong{color:var(--marinho-profundo)}
+.bio-quote{
+  font-family:var(--baloo);font-weight:600;font-size:22px;color:var(--marinho);
+  border-left:5px solid var(--ouro);padding-left:18px;margin:26px 0 0;
+}
+
+/* ============ TIMELINE ============ */
+.timeline{background:linear-gradient(165deg,var(--marinho-profundo),var(--marinho) 80%);color:var(--branco);padding:110px 0;position:relative;overflow:hidden}
+.timeline::before{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1.2px);
+  background-size:26px 26px;pointer-events:none;
+}
+.tl-list{list-style:none;margin-top:56px;position:relative;padding-left:34px}
+.tl-list::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:3px;background:linear-gradient(var(--ceu),var(--ouro));border-radius:2px}
+.tl-item{position:relative;padding:0 0 44px 30px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{
+  content:"";position:absolute;left:-33px;top:8px;width:15px;height:15px;border-radius:50%;
+  background:var(--ouro);border:3px solid var(--marinho-profundo);box-shadow:0 0 0 3px var(--ouro);
+}
+.tl-year{
+  display:inline-block;font-family:var(--anton);font-size:26px;color:var(--marinho-profundo);
+  background:var(--ceu);padding:1px 14px 3px;border-radius:5px;transform:rotate(-1.5deg);
+  margin-bottom:10px;box-shadow:4px 4px 0 rgba(0,0,0,.3);
+}
+.tl-item h3{font-family:var(--cond);font-weight:700;font-size:24px;letter-spacing:.04em;text-transform:uppercase;color:var(--branco);margin-bottom:6px}
+.tl-item p{color:#BCCCDE;max-width:640px;font-size:16.5px}
+.tl-votos{
+  display:inline-block;margin-left:10px;font-family:var(--cond);font-weight:700;font-size:15px;
+  letter-spacing:.06em;background:rgba(199,154,61,.2);color:var(--ouro-quente);
+  border:1px solid rgba(199,154,61,.5);padding:1px 12px;border-radius:999px;vertical-align:middle;
+}
+
+/* ============ PROJETOS ============ */
+.projetos{background:var(--gelo);padding:110px 0}
+.pl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.pl-card{
+  background:var(--branco);border-radius:14px;padding:28px 26px 24px;position:relative;overflow:hidden;
+  box-shadow:0 10px 26px rgba(30,42,56,.08);display:flex;flex-direction:column;
+  transition:transform .2s ease,box-shadow .2s ease;text-decoration:none;color:var(--tinta);
+}
+.pl-card:hover{transform:translateY(-7px);box-shadow:0 22px 44px rgba(30,42,56,.16)}
+.pl-stamp{
+  position:absolute;top:18px;right:-40px;background:var(--ouro);color:var(--marinho-profundo);
+  font-family:var(--cond);font-weight:700;font-size:13.5px;letter-spacing:.16em;
+  padding:5px 46px;transform:rotate(35deg);box-shadow:0 3px 8px rgba(0,0,0,.15);
+  transition:transform .25s ease;
+}
+.pl-stamp--tram{background:var(--ceu)}
+.pl-card:hover .pl-stamp{transform:rotate(31deg) scale(1.06)}
+.pl-num{font-family:var(--anton);font-size:26px;color:var(--marinho-profundo);margin-bottom:4px}
+.pl-tag{
+  align-self:flex-start;font-family:var(--cond);font-weight:600;font-size:13.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--marinho);background:rgba(127,168,204,.22);
+  padding:3px 10px;border-radius:999px;margin:6px 0 12px;
+}
+.pl-card p{font-size:16px;color:var(--tinta-suave);flex:1}
+.pl-link{font-family:var(--cond);font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--marinho);margin-top:18px}
+.pl-link::after{content:" →"}
+.pl-all{text-align:center;margin-top:44px}
+
+/* ============ BANDEIRAS ============ */
+.bandeiras{background:var(--branco);padding:110px 0}
+.bd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.bd-card{
+  border:2px solid #E2E9F0;border-radius:14px;padding:30px 26px;
+  transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;background:var(--branco);
+}
+.bd-card:hover{border-color:var(--ouro);transform:translateY(-5px);box-shadow:0 16px 36px rgba(30,42,56,.10)}
+.bd-icon{
+  width:58px;height:58px;border-radius:14px;display:grid;place-items:center;margin-bottom:18px;
+  background:linear-gradient(145deg,var(--marinho),var(--marinho-claro));
+}
+.bd-icon svg{width:30px;height:30px;stroke:var(--ouro-quente);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.bd-card h3{font-family:var(--cond);font-weight:700;font-size:22px;letter-spacing:.04em;text-transform:uppercase;color:var(--marinho-profundo);margin-bottom:6px}
+.bd-card p{font-size:15.5px;color:var(--tinta-suave)}
+
+/* ============ TERRITORIO ============ */
+.territorio{
+  background:linear-gradient(180deg,var(--marinho-profundo) 0%,#081A30 100%);
+  color:var(--branco);padding:120px 0 130px;position:relative;overflow:hidden;
+}
+.territorio::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:120px;
+  background-image:radial-gradient(rgba(199,154,61,.5) 1.2px,transparent 1.5px);
+  background-size:18px 18px;opacity:.25;
+  mask-image:linear-gradient(transparent,black);-webkit-mask-image:linear-gradient(transparent,black);
+}
+.terr-words{margin-top:48px}
+.terr-word{
+  font-family:var(--anton);text-transform:uppercase;display:block;line-height:1.02;
+  font-size:clamp(52px,9.5vw,124px);letter-spacing:.01em;
+  color:transparent;-webkit-text-stroke:2px rgba(167,198,226,.5);
+  cursor:default;width:fit-content;
+  position:relative;
+  transition:transform .5s cubic-bezier(.2,.7,.3,1),filter .5s ease,color .5s ease,-webkit-text-stroke-color .5s ease;
+}
+.terr-word::before{
+  content:"";position:absolute;left:-30px;top:50%;
+  transform:translateY(-50%) scale(.4);
+  width:13px;height:13px;border-radius:50%;background:var(--ouro-quente);opacity:0;
+  box-shadow:0 0 18px rgba(199,154,61,.95);
+  transition:opacity .4s ease,transform .4s ease;
+}
+.terr-word.spot{
+  transform:translateX(16px);
+  filter:drop-shadow(0 10px 34px rgba(199,154,61,.28));
+  color:transparent;-webkit-text-stroke-color:transparent;
+  background:linear-gradient(100deg,#a87f2e,#c79a3d 25%,#f4e3bb 50%,#c79a3d 75%,#a87f2e);
+  background-size:200% auto;-webkit-background-clip:text;background-clip:text;
+  animation:shine 2.8s linear infinite;
+}
+.terr-word.ceu.spot{
+  background:linear-gradient(100deg,#5c88ad,#7fa8cc 25%,#eaf3fb 50%,#7fa8cc 75%,#5c88ad);
+  background-size:200% auto;-webkit-background-clip:text;background-clip:text;
+}
+.terr-word.spot::before{opacity:1;transform:translateY(-50%) scale(1)}
+@keyframes shine{to{background-position:200% center}}
+.terr-note{margin-top:40px;max-width:560px;color:#B9CBE0;font-size:17px}
+.terr-note b{color:var(--branco)}
+
+/* ============ ESCUTA / DEMANDAS (feed ao vivo) ============ */
+.escuta{background:var(--branco);padding:110px 0}
+.escuta-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:44px}
+.escuta-copy p{font-size:17.5px;color:var(--tinta-suave);max-width:440px}
+.fone{
+  position:relative;max-width:340px;margin-bottom:22px;border-radius:26px;overflow:hidden;
+  border:1px solid rgba(18,56,91,.14);background:#EAF1F8;
+  box-shadow:0 24px 54px rgba(30,42,56,.16);
+}
+.fone-top{
+  display:flex;align-items:center;gap:11px;padding:12px 14px;
+  background:linear-gradient(150deg,var(--marinho-profundo),var(--marinho));color:#fff;
+}
+.fone-av{width:38px;height:38px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid rgba(255,255,255,.35);background:#012141;display:grid;place-items:center}
+.fone-av img{width:100%;height:100%;object-fit:cover}
+.fone-id{flex:1;min-width:0}
+.fone-id b{display:block;font-family:var(--cond);font-weight:700;font-size:15px;letter-spacing:.03em}
+.fone-id span{display:block;font-size:11.5px;color:var(--ceu-claro)}
+.fone-wa{width:22px;height:22px;stroke:var(--ouro-quente);fill:none;stroke-width:2}
+.fone-chat{
+  position:relative;height:200px;padding:12px 12px 6px;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:flex-end;gap:8px;
+  background:
+    radial-gradient(rgba(18,56,91,.05) 1px,transparent 1.4px),
+    linear-gradient(160deg,#EDF3FA,#E2ECF6);
+  background-size:18px 18px,cover;
+}
+.fone-dia{
+  align-self:center;font-family:var(--cond);font-weight:600;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(18,56,91,.45);background:rgba(255,255,255,.75);
+  padding:3px 10px;border-radius:999px;margin-bottom:auto;
+}
+.bolha{
+  align-self:flex-end;max-width:86%;background:#DCF8C6;border-radius:12px 12px 3px 12px;
+  padding:8px 11px 6px;box-shadow:0 2px 6px rgba(30,42,56,.08);
+  animation:bolhaIn .4s cubic-bezier(.22,1,.36,1);
+}
+@keyframes bolhaIn{from{opacity:0;transform:translateY(14px) scale(.94)}to{opacity:1;transform:none}}
+.bolha small{display:block;font-family:var(--cond);font-weight:700;font-size:11px;letter-spacing:.05em;color:var(--marinho);text-transform:uppercase}
+.bolha p{font-size:13.5px;line-height:1.4;color:#1b2a45;margin:2px 0 3px}
+.bolha .meta{display:flex;justify-content:flex-end;gap:4px;font-size:10px;color:rgba(27,42,69,.5);align-items:center}
+.bolha .meta svg{width:14px;height:9px;stroke:#34B7F1;fill:none;stroke-width:2}
+.fone-bar{display:flex;align-items:center;gap:9px;padding:10px 12px;background:#F4F8FC;border-top:1px solid rgba(18,56,91,.08)}
+.fone-input{
+  flex:1;min-height:38px;display:flex;align-items:center;background:#fff;border-radius:999px;
+  padding:8px 15px;font-size:13.5px;color:#1b2a45;line-height:1.35;
+  border:1px solid rgba(18,56,91,.1);
+}
+.fone-input:empty::before{content:"Digite sua demanda…";color:rgba(27,42,69,.35)}
+.fone-input .caret{width:1.5px;height:16px;background:var(--marinho);margin-left:2px;animation:caret 1s steps(1) infinite}
+@keyframes caret{50%{opacity:0}}
+.fone-send{
+  width:40px;height:40px;border-radius:50%;border:0;background:var(--ouro);cursor:default;
+  display:grid;place-items:center;box-shadow:0 4px 12px rgba(199,154,61,.4);
+  transition:transform .2s ease;flex-shrink:0;
+}
+.fone-send svg{width:19px;height:19px;fill:var(--marinho-profundo)}
+.fone-send.tic{transform:scale(1.18) rotate(8deg)}
+@media (max-width:560px){ .fone{max-width:100%} .fone-chat{height:180px} }
+.escuta-copy .exemplos{color:var(--marinho-profundo);font-weight:700}
+.feed-wrap{
+  position:relative;width:100%;max-width:440px;margin-left:auto;
+  background:rgba(255,255,255,.72);border:1px solid rgba(18,56,91,.1);border-radius:22px;
+  padding:18px;box-shadow:0 30px 70px rgba(30,42,56,.14);backdrop-filter:blur(8px);
+}
+.feed-head{display:flex;align-items:center;justify-content:space-between;padding:2px 4px 12px}
+.feed-head .live{
+  display:flex;align-items:center;gap:9px;font-family:var(--cond);font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;font-size:13px;color:var(--marinho-profundo);
+}
+.feed-head .live i{width:9px;height:9px;border-radius:50%;background:#25D366;position:relative}
+.feed-head .live i::after{content:"";position:absolute;inset:0;border-radius:50%;background:#25D366;animation:ping 1.6s ease-out infinite}
+@keyframes ping{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.6);opacity:0}}
+.feed-head span:last-child{font-family:var(--cond);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:12px;color:var(--tinta-suave)}
+.feed{position:relative;height:420px;overflow:hidden;display:flex;flex-direction:column;gap:12px}
+.feed-fade{position:absolute;left:0;right:0;bottom:0;height:96px;pointer-events:none;background:linear-gradient(to top,#fff,transparent)}
+.msg{
+  display:flex;gap:14px;background:#fff;border:1px solid rgba(18,56,91,.1);border-radius:16px;
+  padding:15px;box-shadow:0 8px 22px rgba(30,42,56,.05);
+  animation:msgIn .5s cubic-bezier(.22,1,.36,1);
+}
+@keyframes msgIn{from{opacity:0;transform:translateY(-16px) scale(.96)}to{opacity:1;transform:none}}
+.msg-av{width:44px;height:44px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;font-family:var(--anton);font-size:18px;color:#fff}
+.msg-body{flex:1;min-width:0}
+.msg-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.msg-top b{font-family:var(--cond);font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--marinho-profundo)}
+.msg-time{font-size:12px;color:var(--tinta-suave);white-space:nowrap}
+.msg-area{font-family:var(--cond);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ouro);margin-top:1px}
+.msg-text{font-size:14.5px;color:var(--tinta-suave);margin-top:5px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media (max-width:960px){
+  .escuta-grid{grid-template-columns:1fr;gap:38px}
+  .feed-wrap{margin:0 auto}
+}
+
+/* ============ CONTATO ============ */
+.contato{
+  background:
+    radial-gradient(800px 400px at 85% 0%,rgba(227,184,92,.18),transparent 60%),
+    linear-gradient(150deg,var(--marinho-profundo),var(--marinho));
+  color:var(--branco);padding:110px 0;position:relative;overflow:hidden;
+}
+.ct-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.ct-title{font-family:var(--anton);font-size:clamp(38px,5.5vw,64px);text-transform:uppercase;line-height:1.02;color:var(--branco)}
+.ct-title .tarja{display:inline-block;background:var(--ouro);color:var(--marinho-profundo);padding:0 14px 4px;transform:rotate(-1.5deg);border-radius:5px}
+.ct-sub{margin-top:18px;color:#C7D4E4;font-size:18px;max-width:480px}
+.ct-actions{margin-top:34px;display:flex;gap:16px;flex-wrap:wrap}
+.ct-cards{display:grid;gap:16px}
+.ct-card{
+  display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:20px 22px;
+  text-decoration:none;color:var(--branco);transition:background .2s ease,transform .2s ease;
+}
+.ct-card:hover{background:rgba(255,255,255,.12);transform:translateX(6px)}
+.ct-ic{width:46px;height:46px;border-radius:12px;background:var(--ouro);display:grid;place-items:center;flex-shrink:0}
+.ct-ic svg{width:24px;height:24px;stroke:var(--marinho-profundo);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ct-card b{font-family:var(--cond);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:16px;display:block}
+.ct-card span{color:#BCCCDE;font-size:15px}
+
+/* ============ FOOTER ============ */
+footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
+.ft-grid{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.ft-logo img{height:72px;width:auto;border-radius:10px}
+.ft-links{display:flex;gap:22px;flex-wrap:wrap}
+.ft-links a{font-family:var(--cond);font-weight:600;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:#C7D4E4;text-decoration:none}
+.ft-links a:hover{color:var(--ouro-quente)}
+.ft-note{margin-top:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);font-size:13.5px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.ft-legal{margin-top:16px;font-size:12.5px;color:#6E839B;max-width:80ch;line-height:1.7}
+
+/* floating whatsapp */
+.wa-fab{
+  position:fixed;right:22px;bottom:22px;z-index:950;width:60px;height:60px;border-radius:50%;
+  background:#25D366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.3);
+  transition:transform .2s ease;
+}
+.wa-fab:hover{transform:scale(1.1)}
+.wa-fab svg{width:32px;height:32px;fill:#fff}
+
+/* ============ HERO DECK (baralho de cards) ============ */
+.deck{
+  position:relative;width:min(360px,80vw);aspect-ratio:3/4;margin:0 auto;
+  cursor:pointer;user-select:none;
+}
+.deck-card{
+  position:absolute;inset:0;border-radius:18px;overflow:hidden;
+  border:4px solid rgba(255,255,255,.92);
+  box-shadow:0 30px 70px rgba(0,0,0,.5);
+  transition:transform .55s cubic-bezier(.22,1,.36,1),opacity .55s ease;
+  will-change:transform;background:var(--marinho-profundo);
+}
+.deck-card img.foto-auto{width:100%;height:100%;object-fit:cover;object-position:top center}
+.deck-card .logo-fill{
+  position:absolute;inset:0;display:none;align-items:center;justify-content:center;
+  background:#012141;padding:10%;
+}
+.deck-card .logo-fill img{width:100%;object-fit:contain}
+.deck-card.sem-foto img.foto-auto{display:none}
+.deck-card.sem-foto .logo-fill{display:flex}
+.deck-card .cap{
+  position:absolute;inset:auto 0 0 0;padding:22px 20px;color:#fff;z-index:2;
+  background:linear-gradient(to top,rgba(7,23,41,.92),rgba(7,23,41,.12) 58%,transparent);
+}
+.deck-card .cap b{display:block;font-family:var(--baloo);font-weight:700;font-size:22px;color:var(--ouro-quente)}
+.deck-card .cap span{
+  display:block;margin-top:2px;font-family:var(--cond);font-weight:600;letter-spacing:.1em;
+  text-transform:uppercase;font-size:12.5px;color:rgba(255,255,255,.8);
+}
+/* cards de marca (números do mandato) */
+.deck-card--brand{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:30px 26px;gap:4px}
+.deck-card--brand.gold{background:linear-gradient(160deg,var(--ouro),#a87f2e)}
+.deck-card--brand .coroa{position:absolute;right:-30px;bottom:-24px;width:200px;opacity:.14}
+.deck-card--brand .big{font-family:var(--anton);font-size:64px;line-height:1;color:var(--ouro-quente)}
+.deck-card--brand.gold .big{color:var(--marinho-profundo)}
+.deck-card--brand .lbl{font-family:var(--cond);font-weight:700;font-size:19px;letter-spacing:.06em;text-transform:uppercase;color:#fff;max-width:14ch;line-height:1.25}
+.deck-card--brand.gold .lbl{color:var(--marinho-profundo)}
+.deck-dots{display:flex;gap:8px;justify-content:center;margin-top:24px}
+.deck-dots button{
+  width:8px;height:8px;border-radius:999px;border:0;background:rgba(255,255,255,.28);
+  cursor:pointer;transition:width .3s ease,background .3s ease;padding:0;
+}
+.deck-dots button.on{width:26px;background:var(--ouro-quente)}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:52px;text-align:left}
+  .hero-photo{justify-self:start}
+  .num-grid{grid-template-columns:repeat(2,1fr)}
+  .pl-grid,.bd-grid{grid-template-columns:repeat(2,1fr)}
+  .bio-grid,.ct-grid{grid-template-columns:1fr;gap:44px}
+  .nav-links,.nav-cta{display:none}
+  .nav-logo img{height:46px}
+  .burger{display:block}
+  .mobile-menu{
+    display:flex;position:fixed;inset:0;background:var(--marinho-profundo);z-index:890;
+    flex-direction:column;align-items:center;justify-content:center;gap:8px;
+    opacity:0;pointer-events:none;transition:opacity .3s ease;
+  }
+  .mobile-menu.open{opacity:1;pointer-events:auto}
+  .mobile-menu a{
+    font-family:var(--anton);font-size:34px;text-transform:uppercase;color:var(--branco);
+    text-decoration:none;padding:10px;letter-spacing:.03em;
+  }
+  .mobile-menu a:hover{color:var(--ouro-quente)}
+  .burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+}
+@media (max-width:560px){
+  .wrap{padding:0 18px}
+  .num-grid,.pl-grid,.bd-grid{grid-template-columns:1fr}
+  .hero-badge{left:-4px;font-size:16px;bottom:26px}
+  .ticker span{font-size:18px}
+  .hero{padding:110px 0 64px}
+  .hero-copy .eyebrow{margin-bottom:20px;font-size:13px}
+  .hero-slogan{margin:24px 0 8px}
+  .hero-sub{font-size:16.5px}
+  .hero-ctas{margin-top:28px;gap:12px}
+  .hero-ctas .btn,.ct-actions .btn{width:100%;justify-content:center}
+  .numbers,.bio,.timeline,.projetos,.bandeiras,.escuta,.contato{padding:72px 0}
+  .territorio{padding:80px 0 96px}
+  .num-card{padding:24px 20px 20px}
+  .sec-lead{font-size:16.5px}
+  .terr-word{-webkit-text-stroke-width:1.5px}
+  .terr-word::before{left:-18px;width:9px;height:9px}
+  .terr-word.spot{transform:translateX(8px)}
+  .terr-note{margin-top:30px;font-size:16px}
+  .bd-card,.pl-card{padding:24px 20px}
+  .ct-cards .ct-card{padding:16px 18px}
+  .ft-grid,.ft-links{justify-content:center;text-align:center}
+  .ft-note{justify-content:center;text-align:center}
+  .ft-logo img{height:58px}
+  .wa-fab{width:54px;height:54px;right:16px;bottom:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important}
+  html{scroll-behavior:auto}
+  .rise,.reveal{opacity:1;transform:none}
+  .ticker-track{animation:none}
+  .deck-card,.msg,.terr-word.spot,.feed-head .live i::after,.bolha,.fone-input .caret{animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<div id="progress" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="topo">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#topo" aria-label="Rafael Nobre, início">
+      <img src="assets/logo-oficial.png" alt="Rafael Nobre, Deputado Estadual">
+    </a>
+    <nav aria-label="Navegação principal">
+      <ul class="nav-links">
+        <li><a href="#trajetoria">Trajetória</a></li>
+        <li><a href="#projetos">Leis</a></li>
+        <li><a href="#bandeiras">Bandeiras</a></li>
+        <li><a href="#territorio">Raízes</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" data-zap href="#" target="_blank" rel="noopener">Fale com o gabinete</a>
+    <button class="burger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#trajetoria">Trajetória</a>
+  <a href="#projetos">Leis</a>
+  <a href="#bandeiras">Bandeiras</a>
+  <a href="#territorio">Raízes</a>
+  <a href="#contato">Contato</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow eyebrow--on-dark rise d1" data-eyebrow-hero>Deputado Estadual · Rio de Janeiro</span>
+      <h1 class="hero-name">
+        <span class="l1 rise d2">Rafael</span>
+        <span class="l2 rise d3">Nobre</span>
+      </h1>
+      <p class="hero-slogan rise d4">“Homem de palavra, trabalho de verdade.”</p>
+      <p class="hero-sub rise d4">Filho do Cabuís, em Nilópolis. Filho de motorista de ônibus e de inspetora de alunos, virou o deputado mais votado da história do município — com leis que protegem crianças, mulheres e idosos.</p>
+      <div class="hero-ctas rise d5">
+        <a class="btn btn-gold" data-cta-hero href="#projetos">Conheça as leis</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/rafaelnobre/" target="_blank" rel="noopener">@rafaelnobre</a>
+      </div>
+      <div class="numero-urna rise d5" aria-label="Número do candidato">
+        <span class="rotulo">Deputado estadual</span>
+        <span class="num" data-numero>00000</span>
+      </div>
+    </div>
+    <div class="hero-photo rise d6">
+      <div class="deck" id="deck" aria-label="Galeria de Rafael Nobre">
+        <figure class="deck-card">
+          <!-- FOTO OFICIAL: salve assets/foto-oficial.jpg que ela entra sozinha -->
+          <img class="foto-auto" src="assets/foto-oficial.jpg" alt="Rafael Nobre, Deputado Estadual" fetchpriority="high" onerror="this.closest('.deck-card').classList.add('sem-foto')">
+          <span class="logo-fill" aria-hidden="true"><img src="assets/logo-oficial.png" alt=""></span>
+          <div class="cap"><b>Rafael Nobre</b><span>Deputado Estadual · Rio de Janeiro</span></div>
+        </figure>
+        <figure class="deck-card deck-card--brand">
+          <svg class="coroa" viewBox="240 0 280 200" aria-hidden="true"><g stroke="#C79A3D" fill="none" stroke-width="10"><path d="M262 170 L286 40 L330 76"/><path d="M330 76 C 324 116, 330 146, 354 151 C 366 153, 372 145, 369 134"/><path d="M498 170 L474 40 L430 76"/><path d="M430 76 C 436 116, 430 146, 406 151 C 394 153, 388 145, 391 134"/><path d="M380 16 L424 60 L380 104 L336 60 Z"/><path d="M380 122 L398 140 L380 158 L362 140 Z" stroke-width="9"/></g></svg>
+          <span class="big">51.563</span>
+          <span class="lbl">votos em 2022 · o mais votado de Nilópolis</span>
+        </figure>
+        <figure class="deck-card deck-card--brand gold">
+          <span class="big">7 leis</span>
+          <span class="lbl">sancionadas protegendo crianças, mulheres e idosos</span>
+        </figure>
+        <figure class="deck-card deck-card--brand">
+          <svg class="coroa" viewBox="240 0 280 200" aria-hidden="true"><g stroke="#C79A3D" fill="none" stroke-width="10"><path d="M262 170 L286 40 L330 76"/><path d="M330 76 C 324 116, 330 146, 354 151 C 366 153, 372 145, 369 134"/><path d="M498 170 L474 40 L430 76"/><path d="M430 76 C 436 116, 430 146, 406 151 C 394 153, 388 145, 391 134"/><path d="M380 16 L424 60 L380 104 L336 60 Z"/><path d="M380 122 L398 140 L380 158 L362 140 Z" stroke-width="9"/></g></svg>
+          <span class="big">Do Cabuís</span>
+          <span class="lbl">à Alerj — sem esquecer de onde veio</span>
+        </figure>
+      </div>
+      <div class="deck-dots" aria-hidden="true">
+        <button class="on" aria-label="Card 1"></button><button aria-label="Card 2"></button><button aria-label="Card 3"></button><button aria-label="Card 4"></button>
+      </div>
+      <span class="hero-badge">Filho do Cabuís <b>❤</b></span>
+    </div>
+  </div>
+  <div class="skyline" aria-hidden="true">
+    <svg viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#081A30" d="M0,110 L0,66 L38,66 L38,46 L74,46 L74,72 L110,72 L110,38 L142,38 L142,60 L178,60 L178,44 L214,44 L214,76 L252,76 L252,52 L290,52 L290,30 L322,30 L322,58 L360,58 L360,70 L398,70 L398,42 L436,42 L436,64 L474,64 L474,36 L512,36 L512,68 L552,68 L552,50 L590,50 L590,26 L622,26 L622,54 L660,54 L660,72 L700,72 L700,44 L740,44 L740,62 L778,62 L778,34 L816,34 L816,66 L856,66 L856,48 L894,48 L894,70 L934,70 L934,40 L972,40 L972,58 L1012,58 L1012,28 L1046,28 L1046,56 L1086,56 L1086,74 L1126,74 L1126,46 L1166,46 L1166,64 L1206,64 L1206,36 L1246,36 L1246,60 L1286,60 L1286,50 L1326,50 L1326,68 L1368,68 L1368,44 L1408,44 L1408,72 L1440,72 L1440,110 Z"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Homem de palavra <b>✦</b></span><span>Trabalho de verdade <b>✦</b></span><span>Filho do Cabuís ❤ <b>✦</b></span><span>Nilópolis <b>✦</b></span><span>Baixada Fluminense <b>✦</b></span><span>Do Cabuís à Alerj <b>✦</b></span>
+    <span>Homem de palavra <b>✦</b></span><span>Trabalho de verdade <b>✦</b></span><span>Filho do Cabuís ❤ <b>✦</b></span><span>Nilópolis <b>✦</b></span><span>Baixada Fluminense <b>✦</b></span><span>Do Cabuís à Alerj <b>✦</b></span>
+  </div>
+</div>
+
+<!-- ============ NUMBERS ============ -->
+<section class="numbers">
+  <div class="wrap">
+    <span class="eyebrow reveal">Mandato em números</span>
+    <h2 class="sec-title reveal" data-delay="1">Trabalho que dá para <span class="tarja">medir</span></h2>
+    <div class="num-grid">
+      <div class="num-card reveal" data-delay="1">
+        <div class="num-value"><span class="counter" data-target="51563">0</span></div>
+        <div class="num-label">votos em 2022 — o mais votado de Nilópolis</div>
+      </div>
+      <div class="num-card reveal" data-delay="2">
+        <div class="num-value"><span class="counter" data-target="7">0</span></div>
+        <div class="num-label">leis sancionadas e em vigor</div>
+      </div>
+      <div class="num-card reveal" data-delay="3">
+        <div class="num-value"><span class="counter" data-target="30">0</span>+</div>
+        <div class="num-label">projetos de lei em educação, saúde e inclusão</div>
+      </div>
+      <div class="num-card reveal" data-delay="4">
+        <div class="num-value">2</div>
+        <div class="num-label">comissões como titular na Alerj: Educação e Defesa Civil</div>
+      </div>
+    </div>
+    <p class="num-note reveal" data-delay="3">Fontes: <a href="https://www.alerj.rj.gov.br" target="_blank" rel="noopener">Alerj</a> e <a href="https://rafaelnobre.com.br" target="_blank" rel="noopener">site oficial do mandato</a>.</p>
+  </div>
+</section>
+
+<!-- ============ BIO ============ -->
+<section class="bio" id="quem-e">
+  <div class="wrap bio-grid">
+    <div class="bio-photo reveal">
+      <div class="frame">
+        <!-- FOTO DO PLENÁRIO: salve assets/foto-plenario.jpg que ela entra sozinha -->
+        <img class="foto-auto" src="assets/foto-plenario.jpg" alt="Rafael Nobre na Alerj" loading="lazy" onerror="this.closest('.frame').classList.add('sem-foto')">
+        <img class="logo-fill" src="assets/logo-oficial.png" alt="Rafael Nobre">
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow eyebrow--gold reveal">Quem é Rafael Nobre</span>
+      <h2 class="sec-title reveal" data-delay="1">Do chão do <span class="tarja">Cabuís</span> ao plenário da Alerj</h2>
+      <div class="reveal" data-delay="2">
+        <p>Rafael Nobre, 43 anos, nasceu e cresceu no <strong>Cabuís, em Nilópolis</strong>. Filho de Eduardo Nobre, motorista de ônibus, e de Alda Nobre, inspetora de alunos, aprendeu cedo o valor da palavra cumprida. É casado com a médica Dra. Michelle Nobre e pai de Vitória.</p>
+        <p>Em 2016, foi eleito <strong>vereador mais votado de Nilópolis, com 2.773 votos</strong>. Quatro anos depois, o trabalho virou recorde: <strong>4.020 votos</strong>, a maior votação da história da cidade — e a presidência da Câmara Municipal, eleito por unanimidade.</p>
+        <p>Em 2022, deu o passo seguinte: <strong>51.563 votos</strong> o levaram à Assembleia Legislativa do Rio, como o mais votado do município. Na Alerj, é titular das comissões de <strong>Educação</strong> e <strong>Defesa Civil</strong> — e segue com o mesmo compromisso: <strong>ficar perto das pessoas</strong>.</p>
+      </div>
+      <p class="bio-quote reveal" data-delay="3">“Homem de palavra, trabalho de verdade.”</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="timeline on-dark" id="trajetoria">
+  <div class="wrap">
+    <span class="eyebrow eyebrow--on-dark reveal">Trajetória</span>
+    <h2 class="sec-title reveal" data-delay="1">Uma confiança que só <span class="tarja">cresce</span></h2>
+    <ol class="tl-list">
+      <li class="tl-item reveal">
+        <span class="tl-year">2014</span>
+        <h3>A primeira disputa</h3>
+        <p>Candidato a deputado estadual. Não foi eleito — e não desistiu do caminho.</p>
+      </li>
+      <li class="tl-item reveal" data-delay="1">
+        <span class="tl-year">2016</span>
+        <h3>Vereador de Nilópolis <span class="tl-votos">2.773 votos</span></h3>
+        <p>Eleito o vereador mais votado do município no seu primeiro mandato.</p>
+      </li>
+      <li class="tl-item reveal" data-delay="2">
+        <span class="tl-year">2020</span>
+        <h3>Reeleito com recorde histórico <span class="tl-votos">4.020 votos</span></h3>
+        <p>A maior votação para vereador na história de Nilópolis.</p>
+      </li>
+      <li class="tl-item reveal" data-delay="3">
+        <span class="tl-year">2021</span>
+        <h3>Presidente da Câmara de Nilópolis</h3>
+        <p>Eleito por unanimidade. Modernizou a Casa: transmissões ao vivo das sessões, novo plenário com acessibilidade, Procuradoria Geral e novas instalações.</p>
+      </li>
+      <li class="tl-item reveal" data-delay="4">
+        <span class="tl-year">2022</span>
+        <h3>Deputado estadual <span class="tl-votos">51.563 votos</span></h3>
+        <p>O mais votado em Nilópolis. Na Alerj desde fevereiro de 2023, com atuação em Educação, Defesa Civil, proteção animal e defesa da Baixada.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PROJETOS / LEIS ============ -->
+<section class="projetos" id="projetos">
+  <div class="wrap">
+    <span class="eyebrow reveal">Leis e projetos</span>
+    <h2 class="sec-title reveal" data-delay="1">Palavra que vira <span class="tarja">lei</span></h2>
+    <p class="sec-lead reveal" data-delay="2">São 7 leis sancionadas e mais de 30 projetos apresentados. Alguns destaques, explicados em bom português:</p>
+    <div class="pl-grid">
+      <a class="pl-card reveal" data-delay="1" href="https://rafaelnobre.com.br/conheca-as-leis-de-autoria-de-rafael-nobre/" target="_blank" rel="noopener">
+        <span class="pl-stamp">Lei em vigor</span>
+        <span class="pl-num">Lei 6.692/22</span>
+        <span class="pl-tag">Proteção infantil</span>
+        <p>“Urna do Desabafo”: canal seguro nas escolas para crianças relatarem violência e pedirem ajuda — proteção onde ela mais alcança.</p>
+        <span class="pl-link">Conhecer a lei</span>
+      </a>
+      <a class="pl-card reveal" data-delay="2" href="https://rafaelnobre.com.br/conheca-as-leis-de-autoria-de-rafael-nobre/" target="_blank" rel="noopener">
+        <span class="pl-stamp">Lei em vigor</span>
+        <span class="pl-num">Lei 6.694/22</span>
+        <span class="pl-tag">Direitos da mulher</span>
+        <p>Cria a rede de apoio à mulher vítima de violência, integrando poder público e comunidade no acolhimento e na proteção.</p>
+        <span class="pl-link">Conhecer a lei</span>
+      </a>
+      <a class="pl-card reveal" data-delay="3" href="https://rafaelnobre.com.br/conheca-as-leis-de-autoria-de-rafael-nobre/" target="_blank" rel="noopener">
+        <span class="pl-stamp">Lei em vigor</span>
+        <span class="pl-num">Lei 6.587/19</span>
+        <span class="pl-tag">Educação</span>
+        <p>Programa permanente de combate ao bullying nas escolas, cuidando da segurança e da saúde emocional dos alunos.</p>
+        <span class="pl-link">Conhecer a lei</span>
+      </a>
+      <a class="pl-card reveal" data-delay="1" href="https://rafaelnobre.com.br/conheca-as-leis-de-autoria-de-rafael-nobre/" target="_blank" rel="noopener">
+        <span class="pl-stamp">Lei em vigor</span>
+        <span class="pl-num">Lei 6.629/21</span>
+        <span class="pl-tag">Inclusão</span>
+        <p>Garante direitos e atendimento adequado às pessoas com Transtorno do Espectro Autista e às suas famílias.</p>
+        <span class="pl-link">Conhecer a lei</span>
+      </a>
+      <a class="pl-card reveal" data-delay="2" href="https://www.alerj.rj.gov.br" target="_blank" rel="noopener">
+        <span class="pl-stamp pl-stamp--tram">Na Alerj</span>
+        <span class="pl-num">Dia do Atleta Idoso</span>
+        <span class="pl-tag">Pessoa idosa</span>
+        <p>Projeto que institui o Dia do Atleta Idoso no estado do RJ: esporte, saúde e convivência para quem já contribuiu tanto.</p>
+        <span class="pl-link">Ver na Alerj</span>
+      </a>
+      <a class="pl-card reveal" data-delay="3" href="https://www.alerj.rj.gov.br" target="_blank" rel="noopener">
+        <span class="pl-stamp pl-stamp--tram">Na Alerj</span>
+        <span class="pl-num">Recarga elétrica</span>
+        <span class="pl-tag">Sustentabilidade</span>
+        <p>Garante o direito à instalação de ponto de recarga para veículos elétricos em condomínios de todo o estado.</p>
+        <span class="pl-link">Ver na Alerj</span>
+      </a>
+    </div>
+    <div class="pl-all reveal">
+      <a class="btn btn-gold" href="https://rafaelnobre.com.br/conheca-as-leis-de-autoria-de-rafael-nobre/" target="_blank" rel="noopener">Ver todas as leis e projetos</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BANDEIRAS ============ -->
+<section class="bandeiras" id="bandeiras">
+  <div class="wrap">
+    <span class="eyebrow eyebrow--gold reveal">Bandeiras</span>
+    <h2 class="sec-title reveal" data-delay="1">As causas que <span class="tarja">movem</span> o mandato</h2>
+    <div class="bd-grid">
+      <div class="bd-card reveal" data-delay="1">
+        <div class="bd-icon"><svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h13"/><path d="M9 7h6"/></svg></div>
+        <h3>Educação</h3>
+        <p>Titular da Comissão de Educação da Alerj. Curso de Auxiliar de Veterinário conquistado para a FAETEC de Nilópolis e projetos de preparação para o ENEM.</p>
+      </div>
+      <div class="bd-card reveal" data-delay="2">
+        <div class="bd-icon"><svg viewBox="0 0 24 24"><path d="M12 21C7 17 3 13.5 3 9.5A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 9 3.5c0 4-4 7.5-9 11.5Z"/></svg></div>
+        <h3>Mulheres e crianças</h3>
+        <p>Autor da lei da rede de apoio à mulher vítima de violência, da “Urna do Desabafo” e da lei de combate ao bullying nas escolas.</p>
+      </div>
+      <div class="bd-card reveal" data-delay="3">
+        <div class="bd-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="7.5" r="3.5"/><path d="M5 21c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg></div>
+        <h3>Pessoa idosa</h3>
+        <p>Projeto do Dia do Atleta Idoso, proteção contra maus-tratos com comunicação ao Ministério Público e prioridade processual para idosos.</p>
+      </div>
+      <div class="bd-card reveal" data-delay="1">
+        <div class="bd-icon"><svg viewBox="0 0 24 24"><circle cx="7" cy="8" r="1.8"/><circle cx="12" cy="6" r="1.8"/><circle cx="17" cy="8" r="1.8"/><path d="M12 11c-3 0-5.5 2.4-5.5 4.6 0 1.4 1.1 2.4 2.5 2.4 1 0 1.9-.5 3-.5s2 .5 3 .5c1.4 0 2.5-1 2.5-2.4C17.5 13.4 15 11 12 11Z"/></svg></div>
+        <h3>Bem-estar animal</h3>
+        <p>Suplente da Comissão de Proteção dos Animais, articulou a Clínica Veterinária para Nilópolis e a formação profissional na área pela FAETEC.</p>
+      </div>
+      <div class="bd-card reveal" data-delay="2">
+        <div class="bd-icon"><svg viewBox="0 0 24 24"><path d="M5 20c0-9 5-14 14-15-1 9-6 14-14 15Z"/><path d="M5 20c3-4 7-8 11-11"/></svg></div>
+        <h3>Sustentabilidade</h3>
+        <p>Recarga de veículos elétricos em condomínios, acompanhamento da dragagem do Rio Pavuna e ecobarreiras na hidrografia da Baixada.</p>
+      </div>
+      <div class="bd-card reveal" data-delay="3">
+        <div class="bd-icon"><svg viewBox="0 0 24 24"><path d="M12 3 3 10h2v10h6v-6h2v6h6V10h2L12 3Z"/></svg></div>
+        <h3>Nilópolis e Baixada</h3>
+        <p>Recursos articulados para o Hospital JK, titular da Comissão de Defesa Civil e presença constante: demanda de bairro vira ação no gabinete.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TERRITORIO ============ -->
+<section class="territorio on-dark" id="territorio">
+  <div class="wrap">
+    <span class="eyebrow eyebrow--on-dark reveal">Raízes</span>
+    <h2 class="sec-title reveal" data-delay="1">Onde essa história <span class="tarja">acontece</span></h2>
+    <div class="terr-words" id="terrWords">
+      <span class="terr-word gold">Cabuís</span>
+      <span class="terr-word ceu">Nilópolis</span>
+      <span class="terr-word">Baixada Fluminense</span>
+      <span class="terr-word gold">Rio de Janeiro</span>
+    </div>
+    <p class="terr-note reveal" data-delay="3"><b>Do Cabuís para o estado inteiro.</b> É na rua, na escola, na feira e na igreja que o mandato escuta primeiro. E é para esses lugares que o trabalho volta, em forma de lei, emenda e presença.</p>
+  </div>
+</section>
+
+<!-- ============ ESCUTA / DEMANDAS ============ -->
+<section class="escuta">
+  <div class="wrap">
+    <span class="eyebrow reveal">Todos os dias</span>
+    <h2 class="sec-title reveal" data-delay="1">O gabinete <span class="tarja">escuta</span></h2>
+    <div class="escuta-grid">
+      <div class="escuta-copy reveal" data-delay="1">
+        <div class="fone" aria-hidden="true">
+          <div class="fone-top">
+            <span class="fone-av"><img src="assets/logo-oficial.png" alt=""></span>
+            <div class="fone-id"><b>Gabinete Rafael Nobre</b><span id="foneStatus">online</span></div>
+            <svg viewBox="0 0 24 24" class="fone-wa"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L4 20l1-4.6A8.5 8.5 0 1 1 21 11.5z"/></svg>
+          </div>
+          <div class="fone-chat" id="foneChat">
+            <span class="fone-dia">hoje</span>
+          </div>
+          <div class="fone-bar">
+            <span class="fone-input" id="foneInput"><i class="caret"></i></span>
+            <button class="fone-send" id="foneSend" tabindex="-1">
+              <svg viewBox="0 0 24 24"><path d="M3 11.5 21 3l-8.5 18-2.4-7.1L3 11.5z"/></svg>
+            </button>
+          </div>
+        </div>
+        <p>Mensagens, pedidos e ideias chegam de Nilópolis e de toda a Baixada Fluminense. Cada uma vira encaminhamento, indicação ou presença. Alguns <span class="exemplos">exemplos ilustrativos</span> do que chega pelos nossos canais:</p>
+        <a class="btn btn-gold" style="margin-top:24px" data-zap href="#" target="_blank" rel="noopener">Mande a sua demanda</a>
+      </div>
+      <div class="feed-wrap reveal" data-delay="2">
+        <div class="feed-head">
+          <span class="live"><i></i>Demandas do gabinete</span>
+          <span>exemplos</span>
+        </div>
+        <div class="feed" id="feed"></div>
+        <div class="feed-fade" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section class="contato" id="contato">
+  <div class="wrap ct-grid">
+    <div>
+      <span class="eyebrow eyebrow--on-dark reveal">Fala com a gente!</span>
+      <h2 class="ct-title reveal" data-delay="1" data-titulo-apoio>Sua voz chega até a <span class="tarja">Alerj</span></h2>
+      <p class="ct-sub reveal" data-delay="2">Tem uma demanda do seu bairro, uma ideia de projeto ou quer acompanhar o trabalho de perto? O gabinete está de portas abertas.</p>
+      <div class="ct-actions reveal" data-delay="3">
+        <a class="btn btn-gold" data-zap data-cta-form href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="btn btn-ghost" href="mailto:contato@rafaelnobre.com.br">Enviar e-mail</a>
+      </div>
+    </div>
+    <div class="ct-cards">
+      <a class="ct-card reveal" data-delay="1" data-zap href="#" target="_blank" rel="noopener">
+        <span class="ct-ic"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L4 20l1-4.6A8.5 8.5 0 1 1 21 11.5z"/></svg></span>
+        <span><b>WhatsApp</b><span>Atendimento do gabinete</span></span>
+      </a>
+      <a class="ct-card reveal" data-delay="2" href="mailto:contato@rafaelnobre.com.br">
+        <span class="ct-ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+        <span><b>E-mail</b><span>contato@rafaelnobre.com.br</span></span>
+      </a>
+      <a class="ct-card reveal" data-delay="3" href="https://www.instagram.com/rafaelnobre/" target="_blank" rel="noopener">
+        <span class="ct-ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></span>
+        <span><b>Instagram</b><span>@rafaelnobre</span></span>
+      </a>
+      <a class="ct-card reveal" data-delay="4" href="https://www.alerj.rj.gov.br" target="_blank" rel="noopener">
+        <span class="ct-ic"><svg viewBox="0 0 24 24"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg></span>
+        <span><b>Gabinete na Alerj</b><span>Assembleia Legislativa do Estado do Rio de Janeiro</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="rodape">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-logo"><img src="assets/logo-oficial.png" alt="Rafael Nobre, Deputado Estadual"></div>
+      <nav class="ft-links" aria-label="Links do rodapé">
+        <a href="https://rafaelnobre.com.br" target="_blank" rel="noopener">Site do mandato</a>
+        <a href="https://www.instagram.com/rafaelnobre/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.alerj.rj.gov.br" target="_blank" rel="noopener">Alerj</a>
+      </nav>
+    </div>
+    <div class="ft-note">
+      <span>Gabinete do Deputado Estadual Rafael Nobre</span>
+      <span>Dados parlamentares: Alerj e site oficial do mandato</span>
+    </div>
+    <p class="ft-legal" data-legal>
+      Página de divulgação do trabalho parlamentar do deputado estadual Rafael Nobre.
+      Não constitui propaganda eleitoral: não há pedido de voto nem divulgação de candidatura. #RafaelNobre
+    </p>
+  </div>
+</footer>
+
+<a class="wa-fab" data-zap href="#" target="_blank" rel="noopener" aria-label="Falar com o gabinete no WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.6.8 5 2.2 7L4.5 28l6.2-1.6c1.9 1 4 1.6 6.3 1.6 6.6 0 11-5.4 11-12S22.6 3 16 3zm0 22.2c-2 0-3.9-.6-5.5-1.5l-.4-.2-3.7 1 1-3.6-.3-.4C6 18.9 5.4 17 5.4 15 5.4 9.2 10.2 4.4 16 4.4S26.6 9.2 26.6 15 21.8 25.2 16 25.2zm5.8-7.5c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.6-1.8-1.7-2.1-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>
+</a>
+
+<script>
+/* =====================================================================
+   CONFIGURAÇÃO — edite apenas este bloco.
+   MODO CAMPANHA: quando a propaganda eleitoral for liberada pela
+   Justiça Eleitoral, troque MODO_CAMPANHA para true e preencha
+   NUMERO_CANDIDATO. Antes disso, nunca publicar com o modo ligado.
+   ===================================================================== */
+var WHATSAPP_GABINETE = "5521999999999"; // DDI+DDD+número, só dígitos
+var MODO_CAMPANHA = false;
+var NUMERO_CANDIDATO = "00000";          // preencher só após a convenção partidária
+
+(function(){
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* WhatsApp em todos os botões marcados */
+  var zapMsg = encodeURIComponent("Olá! Vim pela página do deputado Rafael Nobre e quero falar com o gabinete.");
+  document.querySelectorAll("[data-zap]").forEach(function(a){
+    a.href = "https://wa.me/" + WHATSAPP_GABINETE + "?text=" + zapMsg;
+  });
+
+  /* modo campanha */
+  if (MODO_CAMPANHA) {
+    document.body.classList.add("campanha");
+    document.querySelector("[data-numero]").textContent = NUMERO_CANDIDATO;
+    document.querySelector("[data-eyebrow-hero]").textContent = "Candidato a Deputado Estadual · Rio de Janeiro";
+    document.querySelector("[data-cta-hero]").textContent = "Vote " + NUMERO_CANDIDATO;
+    document.querySelector("[data-legal]").textContent =
+      "Propaganda eleitoral. Eleições 2026. Rafael Nobre — deputado estadual, número " + NUMERO_CANDIDATO +
+      ". CNPJ da campanha e demais informações legais conforme registro na Justiça Eleitoral. #RafaelNobre";
+  }
+
+  /* progress bar */
+  var bar = document.getElementById("progress");
+  function onScroll(){
+    var h = document.documentElement;
+    var p = h.scrollTop / (h.scrollHeight - h.clientHeight);
+    bar.style.width = (p * 100) + "%";
+    document.querySelector("header.nav").classList.toggle("scrolled", h.scrollTop > 30);
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+
+  /* mobile menu */
+  var burger = document.querySelector(".burger");
+  var menu = document.getElementById("mobileMenu");
+  burger.addEventListener("click", function(){
+    var open = menu.classList.toggle("open");
+    burger.classList.toggle("open", open);
+    burger.setAttribute("aria-expanded", open);
+    document.body.style.overflow = open ? "hidden" : "";
+  });
+  menu.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){
+      menu.classList.remove("open"); burger.classList.remove("open");
+      burger.setAttribute("aria-expanded","false"); document.body.style.overflow = "";
+    });
+  });
+
+  /* scroll reveal */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add("is-in"); io.unobserve(e.target); }
+    });
+  }, {threshold:.18, rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+
+  /* counters */
+  function animateCounter(el){
+    var target = parseInt(el.dataset.target, 10);
+    if(reduced){ el.textContent = target.toLocaleString("pt-BR"); return; }
+    var dur = 1800, t0 = null;
+    function step(t){
+      if(!t0) t0 = t;
+      var k = Math.min((t - t0) / dur, 1);
+      k = 1 - Math.pow(1 - k, 3);
+      el.textContent = Math.round(target * k).toLocaleString("pt-BR");
+      if(k < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var cio = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ animateCounter(e.target); cio.unobserve(e.target); }
+    });
+  }, {threshold:.6});
+  document.querySelectorAll(".counter").forEach(function(el){ cio.observe(el); });
+
+  /* subtle hero parallax */
+  if(!reduced){
+    var photo = document.querySelector(".hero-photo");
+    window.addEventListener("scroll", function(){
+      var y = window.scrollY;
+      if(y < window.innerHeight && photo) photo.style.transform = "translateY(" + (y * 0.08) + "px)";
+    }, {passive:true});
+  }
+
+  /* ============ HERO DECK (baralho) ============ */
+  (function(){
+    var deck = document.getElementById("deck");
+    if(!deck) return;
+    var cards = [].slice.call(deck.querySelectorAll(".deck-card"));
+    var dots = [].slice.call(document.querySelectorAll(".deck-dots button"));
+    var STACK = [
+      {x:0,y:0,r:-3,s:1,z:50,o:1},
+      {x:28,y:16,r:4,s:.95,z:40,o:1},
+      {x:-24,y:30,r:-6,s:.9,z:30,o:.95},
+      {x:34,y:46,r:7,s:.86,z:20,o:.85}
+    ];
+    var active = 0, n = cards.length, timer = null;
+    function layout(){
+      cards.forEach(function(c,i){
+        var pos = (i - active + n) % n;
+        var p = STACK[Math.min(pos, STACK.length - 1)];
+        c.style.transform = "translate(" + p.x + "px," + p.y + "px) rotate(" + p.r + "deg) scale(" + p.s + ")";
+        c.style.zIndex = p.z; c.style.opacity = p.o;
+      });
+      dots.forEach(function(d,i){ d.classList.toggle("on", i === active); });
+    }
+    function go(i){ active = (i + n) % n; layout(); }
+    function advance(){ go(active + 1); }
+    function start(){ if(timer) clearInterval(timer); if(!reduced) timer = setInterval(advance, 3200); }
+    layout(); start();
+    deck.addEventListener("mouseenter", function(){ advance(); start(); });
+    deck.addEventListener("click", function(){ advance(); start(); });
+    dots.forEach(function(d,i){ d.addEventListener("click", function(e){ e.stopPropagation(); go(i); start(); }); });
+  })();
+
+  /* ============ TERRITÓRIO / RAÍZES spotlight ============ */
+  (function(){
+    var words = [].slice.call(document.querySelectorAll(".terr-word"));
+    if(!words.length) return;
+    var idx = 0, hover = null, timer = null;
+    function paint(){
+      var cur = hover !== null ? hover : idx;
+      words.forEach(function(w,i){ w.classList.toggle("spot", i === cur); });
+    }
+    function start(){ if(timer) clearInterval(timer); if(!reduced) timer = setInterval(function(){ idx = (idx + 1) % words.length; paint(); }, 1900); }
+    words.forEach(function(w,i){
+      w.addEventListener("mouseenter", function(){ hover = i; paint(); });
+      w.addEventListener("mouseleave", function(){ hover = null; paint(); });
+    });
+    paint(); start();
+  })();
+
+  /* ============ FEED DE DEMANDAS (exemplos ilustrativos) ============ */
+  (function(){
+    var feed = document.getElementById("feed");
+    if(!feed) return;
+    var DATA = [
+      {name:"Dona Marlene", area:"Cabuís", time:"agora", a:"ouro", text:"Meu neto estuda na escola aqui perto. A Urna do Desabafo já chegou lá? Achei muito importante."},
+      {name:"Marcos", area:"Olinda · Nilópolis", time:"1 min", a:"ceu", text:"Como faço para inscrever meu filho no curso de Auxiliar de Veterinário da FAETEC?"},
+      {name:"Cláudia", area:"Centro · Nilópolis", time:"2 min", a:"marinho", text:"Deputado, a rede de apoio à mulher me ajudou demais. Obrigada por essa lei."},
+      {name:"Seu Jorge", area:"Manoel Reis", time:"4 min", a:"ouro", text:"Sou aposentado e atleta. Quando sai o Dia do Atleta Idoso? Quero participar!"},
+      {name:"Juliana", area:"Mesquita", time:"6 min", a:"ceu", text:"O atendimento do Hospital JK melhorou? Minha mãe faz tratamento lá."},
+      {name:"Paulo", area:"Nova Cidade", time:"8 min", a:"marinho", text:"Tem previsão de mutirão de castração aqui no bairro? Muitos animais precisando."},
+      {name:"Fernanda", area:"São João de Meriti", time:"11 min", a:"ouro", text:"Queria levar a palestra de combate ao bullying para a escola dos meus filhos."}
+    ];
+    var AV = {
+      ouro:"linear-gradient(145deg,#E3B85C,#C79A3D)",
+      ceu:"linear-gradient(145deg,#7FA8CC,#1E4E7A)",
+      marinho:"linear-gradient(145deg,#12385B,#0B2440)"
+    };
+    function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+    function card(m){
+      var d = document.createElement("div"); d.className = "msg";
+      d.innerHTML =
+        '<div class="msg-av" style="background:' + AV[m.a] + '">' + esc(m.name.charAt(0)) + '</div>' +
+        '<div class="msg-body"><div class="msg-top"><b>' + esc(m.name) + '</b>' +
+        '<span class="msg-time">' + esc(m.time) + '</span></div>' +
+        '<div class="msg-area">' + esc(m.area) + '</div>' +
+        '<div class="msg-text">' + esc(m.text) + '</div></div>';
+      return d;
+    }
+    var i = 0;
+    function push(m){
+      feed.insertBefore(card(m), feed.firstChild);
+      while(feed.children.length > 4) feed.removeChild(feed.lastChild);
+    }
+
+    var chat = document.getElementById("foneChat");
+    var input = document.getElementById("foneInput");
+    var send = document.getElementById("foneSend");
+    var status = document.getElementById("foneStatus");
+
+    function bolha(m){
+      var b = document.createElement("div"); b.className = "bolha";
+      b.innerHTML = '<small>' + esc(m.name) + ' · ' + esc(m.area) + '</small>' +
+        '<p>' + esc(m.text) + '</p>' +
+        '<span class="meta">' + esc(m.time) +
+        '<svg viewBox="0 0 16 10"><path d="M1 5l3 3 5-6M7 8l2 2 6-8"/></svg></span>';
+      chat.appendChild(b);
+      var bolhas = chat.querySelectorAll(".bolha");
+      if(bolhas.length > 2) chat.removeChild(bolhas[0]);
+    }
+
+    if(reduced || !chat){
+      for(var k = 0; k < 4; k++){ push(DATA[k]); }
+      if(chat){ bolha(DATA[4]); bolha(DATA[5]); }
+      if(input) input.textContent = "";
+      return;
+    }
+
+    push(DATA[5]); push(DATA[6]);
+
+    var caret = input.querySelector(".caret");
+    function ciclo(){
+      var m = DATA[i % DATA.length]; i++;
+      status.textContent = esc(m.name) + " está digitando…";
+      var txt = m.text, pos = 0;
+      var t = setInterval(function(){
+        pos += 1 + Math.floor(Math.random() * 2);
+        if(pos >= txt.length) pos = txt.length;
+        input.textContent = txt.slice(0, pos);
+        input.appendChild(caret);
+        if(pos >= txt.length){
+          clearInterval(t);
+          setTimeout(function(){
+            send.classList.add("tic");
+            input.textContent = ""; input.appendChild(caret);
+            status.textContent = "online";
+            bolha(m);
+            setTimeout(function(){ send.classList.remove("tic"); }, 350);
+            setTimeout(function(){ push(m); }, 500);
+            setTimeout(ciclo, 2600);
+          }, 420);
+        }
+      }, 34);
+    }
+    ciclo();
+  })();
+})();
+</script>
+</body>
+</html>

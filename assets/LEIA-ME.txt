@@ -1,0 +1,10 @@
+FOTO OFICIAL DO DEPUTADO
+
+Salve a foto oficial nesta pasta com o nome exato:
+
+    foto-oficial.jpg
+
+Pronto — ela aparece automaticamente na moldura do topo da página,
+sem precisar mexer em código. Formato ideal: vertical (retrato),
+mínimo 800×1000 px. Enquanto o arquivo não existir, a moldura
+mostra a logo oficial.
