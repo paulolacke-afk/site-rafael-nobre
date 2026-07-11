@@ -6,8 +6,11 @@
 <title>Rafael Nobre | Deputado Estadual · RJ</title>
 <meta name="description" content="Rafael Nobre, deputado estadual pelo Rio de Janeiro. Filho do Cabuís, em Nilópolis: o mais votado da história do município. Homem de palavra, trabalho de verdade.">
 <meta property="og:title" content="Rafael Nobre | Deputado Estadual · RJ">
-<meta property="og:description" content="Filho do Cabuís. Homem de palavra, trabalho de verdade.">
-<meta property="og:image" content="assets/logo-oficial.png">
+<meta property="og:description" content="Filho do Cabuís, em Nilópolis. Por Nilópolis, pela Baixada, pelo Rio de Janeiro.">
+<meta property="og:image" content="assets/foto-oficial.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Rafael Nobre","jobTitle":"Deputado Estadual do Rio de Janeiro","birthDate":"1983-04-15","birthPlace":"Nilópolis, Rio de Janeiro, Brasil","affiliation":{"@type":"Organization","name":"União Brasil"},"url":"https://rafaelnobre.com.br","image":"assets/foto-oficial.jpg","sameAs":["https://www.instagram.com/rafaelnobre.rj/","https://www.facebook.com/rafaelnobre.rj/","https://x.com/rafaelnobre_rj","https://pt.wikipedia.org/wiki/Rafael_Nobre","https://www.alerj.rj.gov.br/Deputados/PerfilDeputado/489?Legislatura=20"]}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='96' fill='%23012141'/%3E%3Cg stroke='%23C79A3D' fill='none' stroke-width='26'%3E%3Cpath d='M64 420 H448'/%3E%3Cpath d='M118 420 L158 168 L232 232'/%3E%3Cpath d='M394 420 L354 168 L280 232'/%3E%3Cpath d='M256 64 L336 144 L256 224 L176 144 Z'/%3E%3Cpath d='M256 268 L296 308 L256 348 L216 308 Z' stroke-width='24'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,17 +18,17 @@
 <style>
 /* ============ TOKENS ============ */
 :root{
-  --marinho-profundo:#0B2440;
-  --marinho:#12385B;
-  --marinho-claro:#1E4E7A;
-  --ceu:#7FA8CC;
-  --ceu-claro:#A7C6E2;
-  --ouro:#C79A3D;
-  --ouro-quente:#E3B85C;
+  --marinho-profundo:#12406E;
+  --marinho:#1A5292;
+  --marinho-claro:#2E6DB4;
+  --ceu:#7EB2DD;
+  --ceu-claro:#AFD2EE;
+  --ouro:#D5A94F;
+  --ouro-quente:#EFC880;
   --branco:#FFFFFF;
-  --gelo:#F5F7F9;
-  --tinta:#1E2A38;
-  --tinta-suave:#4E617A;
+  --gelo:#F6F9FC;
+  --tinta:#1E3A57;
+  --tinta-suave:#54708C;
   --anton:'Anton',Impact,sans-serif;
   --barlow:'Barlow',system-ui,sans-serif;
   --cond:'Barlow Condensed',var(--barlow);
@@ -440,6 +443,27 @@ body.campanha .numero-urna{display:block}
   .feed-wrap{margin:0 auto}
 }
 
+/* ============ NOTÍCIAS ============ */
+.noticias{background:var(--gelo);padding:110px 0}
+.nw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.nw-card{
+  background:var(--branco);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:0 10px 26px rgba(30,58,87,.08);text-decoration:none;color:var(--tinta);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.nw-card:hover{transform:translateY(-7px);box-shadow:0 22px 44px rgba(30,58,87,.16)}
+.nw-thumb{aspect-ratio:16/10;overflow:hidden;background:var(--marinho-profundo)}
+.nw-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.nw-card:hover .nw-thumb img{transform:scale(1.05)}
+.nw-body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1;gap:10px}
+.nw-tag{align-self:flex-start;font-family:var(--cond);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--marinho);background:rgba(126,178,221,.22);padding:3px 10px;border-radius:999px}
+.nw-body h3{font-family:var(--cond);font-weight:700;font-size:20px;line-height:1.3;letter-spacing:.02em;color:var(--marinho-profundo);flex:1}
+.nw-link{font-family:var(--cond);font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--marinho)}
+.nw-link::after{content:" →"}
+.nw-all{text-align:center;margin-top:44px}
+@media (max-width:960px){.nw-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.nw-grid{grid-template-columns:1fr}.noticias{padding:72px 0}}
+
 /* ============ CONTATO ============ */
 .contato{
   background:
@@ -603,6 +627,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
         <li><a href="#projetos">Leis</a></li>
         <li><a href="#bandeiras">Bandeiras</a></li>
         <li><a href="#territorio">Raízes</a></li>
+        <li><a href="#noticias">Notícias</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
@@ -617,6 +642,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
   <a href="#projetos">Leis</a>
   <a href="#bandeiras">Bandeiras</a>
   <a href="#territorio">Raízes</a>
+  <a href="#noticias">Notícias</a>
   <a href="#contato">Contato</a>
 </div>
 
@@ -629,11 +655,11 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
         <span class="l1 rise d2">Rafael</span>
         <span class="l2 rise d3">Nobre</span>
       </h1>
-      <p class="hero-slogan rise d4">“Homem de palavra, trabalho de verdade.”</p>
-      <p class="hero-sub rise d4">Filho do Cabuís, em Nilópolis. Filho de motorista de ônibus e de inspetora de alunos, virou o deputado mais votado da história do município — com leis que protegem crianças, mulheres e idosos.</p>
+      <p class="hero-slogan rise d4">Por Nilópolis, pela Baixada, pelo Rio de Janeiro.</p>
+      <p class="hero-sub rise d4">Filho do Cabuís, em Nilópolis, Rafael Nobre é o deputado mais votado da história do município: leis em vigor que protegem crianças, mulheres e idosos, e recursos conquistados em Brasília e no Governo do Estado para a saúde e as obras da região.</p>
       <div class="hero-ctas rise d5">
         <a class="btn btn-gold" data-cta-hero href="#projetos">Conheça as leis</a>
-        <a class="btn btn-ghost" href="https://www.instagram.com/rafaelnobre/" target="_blank" rel="noopener">@rafaelnobre</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/rafaelnobre.rj/" target="_blank" rel="noopener">@rafaelnobre.rj</a>
       </div>
       <div class="numero-urna rise d5" aria-label="Número do candidato">
         <span class="rotulo">Deputado estadual</span>
@@ -679,8 +705,8 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 <!-- ============ TICKER ============ -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
-    <span>Homem de palavra <b>✦</b></span><span>Trabalho de verdade <b>✦</b></span><span>Filho do Cabuís ❤ <b>✦</b></span><span>Nilópolis <b>✦</b></span><span>Baixada Fluminense <b>✦</b></span><span>Do Cabuís à Alerj <b>✦</b></span>
-    <span>Homem de palavra <b>✦</b></span><span>Trabalho de verdade <b>✦</b></span><span>Filho do Cabuís ❤ <b>✦</b></span><span>Nilópolis <b>✦</b></span><span>Baixada Fluminense <b>✦</b></span><span>Do Cabuís à Alerj <b>✦</b></span>
+    <span>Por Nilópolis <b>✦</b></span><span>Pela Baixada <b>✦</b></span><span>Pelo Rio de Janeiro <b>✦</b></span><span>Filho do Cabuís ❤ <b>✦</b></span><span>Educação <b>✦</b></span><span>Do Cabuís à Alerj <b>✦</b></span>
+    <span>Por Nilópolis <b>✦</b></span><span>Pela Baixada <b>✦</b></span><span>Pelo Rio de Janeiro <b>✦</b></span><span>Filho do Cabuís ❤ <b>✦</b></span><span>Educação <b>✦</b></span><span>Do Cabuís à Alerj <b>✦</b></span>
   </div>
 </div>
 
@@ -716,8 +742,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
   <div class="wrap bio-grid">
     <div class="bio-photo reveal">
       <div class="frame">
-        <!-- FOTO DO PLENÁRIO: salve assets/foto-plenario.jpg que ela entra sozinha -->
-        <img class="foto-auto" src="assets/foto-plenario.jpg" alt="Rafael Nobre na Alerj" loading="lazy" onerror="this.closest('.frame').classList.add('sem-foto')">
+        <img class="foto-auto" src="assets/foto-abraco.jpg" alt="Rafael Nobre abraçando uma moradora de Nilópolis" loading="lazy" style="object-position:76% center" onerror="this.closest('.frame').classList.add('sem-foto')">
         <img class="logo-fill" src="assets/logo-oficial.png" alt="Rafael Nobre">
       </div>
     </div>
@@ -727,9 +752,9 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
       <div class="reveal" data-delay="2">
         <p>Rafael Nobre, 43 anos, nasceu e cresceu no <strong>Cabuís, em Nilópolis</strong>. Filho de Eduardo Nobre, motorista de ônibus, e de Alda Nobre, inspetora de alunos, aprendeu cedo o valor da palavra cumprida. É casado com a médica Dra. Michelle Nobre e pai de Vitória.</p>
         <p>Em 2016, foi eleito <strong>vereador mais votado de Nilópolis, com 2.773 votos</strong>. Quatro anos depois, o trabalho virou recorde: <strong>4.020 votos</strong>, a maior votação da história da cidade — e a presidência da Câmara Municipal, eleito por unanimidade.</p>
-        <p>Em 2022, deu o passo seguinte: <strong>51.563 votos</strong> o levaram à Assembleia Legislativa do Rio, como o mais votado do município. Na Alerj, é titular das comissões de <strong>Educação</strong> e <strong>Defesa Civil</strong> — e segue com o mesmo compromisso: <strong>ficar perto das pessoas</strong>.</p>
+        <p>Em 2022, deu o passo seguinte: <strong>51.563 votos</strong> o levaram à Assembleia Legislativa do Rio, como o mais votado do município. Na Alerj, é titular das comissões de <strong>Educação</strong> e <strong>Defesa Civil</strong> e Segundo Vogal da Mesa Diretora. Em Brasília, conquistou <strong>emendas parlamentares para a saúde de Nilópolis</strong>; junto ao Governo do Estado, ajudou a garantir um dos maiores pacotes de obras já realizados no município.</p>
       </div>
-      <p class="bio-quote reveal" data-delay="3">“Homem de palavra, trabalho de verdade.”</p>
+      <p class="bio-quote reveal" data-delay="3">Mandato bom é o que volta para a rua: em forma de lei, de obra e de cuidado com as pessoas.</p>
     </div>
   </div>
 </section>
@@ -889,7 +914,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
       <div class="escuta-copy reveal" data-delay="1">
         <div class="fone" aria-hidden="true">
           <div class="fone-top">
-            <span class="fone-av"><img src="assets/logo-oficial.png" alt=""></span>
+            <span class="fone-av"><img src="assets/foto-oficial.jpg" alt=""></span>
             <div class="fone-id"><b>Gabinete Rafael Nobre</b><span id="foneStatus">online</span></div>
             <svg viewBox="0 0 24 24" class="fone-wa"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L4 20l1-4.6A8.5 8.5 0 1 1 21 11.5z"/></svg>
           </div>
@@ -918,6 +943,43 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
   </div>
 </section>
 
+<!-- ============ NOTÍCIAS ============ -->
+<section class="noticias" id="noticias">
+  <div class="wrap">
+    <span class="eyebrow reveal">Direto do mandato</span>
+    <h2 class="sec-title reveal" data-delay="1">Últimas <span class="tarja">notícias</span></h2>
+    <div class="nw-grid">
+      <a class="nw-card reveal" data-delay="1" href="https://rafaelnobre.com.br/rafael-nobre-apresenta-projeto-de-lei-que-cria-o-dia-do-atleta-idoso-no-estado-do-rio-de-janeiro/" target="_blank" rel="noopener">
+        <span class="nw-thumb"><img src="https://rafaelnobre.com.br/wp-content/uploads/2026/03/Dia-do-Atleta-Idoso-imagem-destacada.png" alt="" loading="lazy"></span>
+        <span class="nw-body">
+          <span class="nw-tag">Pessoa idosa</span>
+          <h3>Projeto de lei cria o “Dia do Atleta Idoso” no Estado do Rio de Janeiro</h3>
+          <span class="nw-link">Ler no site oficial</span>
+        </span>
+      </a>
+      <a class="nw-card reveal" data-delay="2" href="https://rafaelnobre.com.br/rafael-nobre-solicita-ao-governo-do-estado-a-implantacao-do-curso-de-auxiliar-de-veterinario-na-faetec-de-nilopolis/" target="_blank" rel="noopener">
+        <span class="nw-thumb"><img src="https://rafaelnobre.com.br/wp-content/uploads/2026/03/arte-auxiliar-veterinario.png" alt="" loading="lazy"></span>
+        <span class="nw-body">
+          <span class="nw-tag">Educação</span>
+          <h3>Curso de Auxiliar de Veterinário solicitado para a FAETEC de Nilópolis</h3>
+          <span class="nw-link">Ler no site oficial</span>
+        </span>
+      </a>
+      <a class="nw-card reveal" data-delay="3" href="https://rafaelnobre.com.br/rafael-nobre-se-reune-com-secretario-de-governo-do-rj-na-pauta-recursos-para-o-hospital-e-maternidade-jk-e-clinica-veterinaria/" target="_blank" rel="noopener">
+        <span class="nw-thumb"><img src="https://rafaelnobre.com.br/wp-content/uploads/2026/02/reuniao-com-secretario-de-governo-jk-e-clinica-veterinaria-2.jpg" alt="" loading="lazy"></span>
+        <span class="nw-body">
+          <span class="nw-tag">Saúde</span>
+          <h3>Recursos para o Hospital e Maternidade JK e a Clínica Veterinária em pauta no Governo do RJ</h3>
+          <span class="nw-link">Ler no site oficial</span>
+        </span>
+      </a>
+    </div>
+    <div class="nw-all reveal">
+      <a class="btn btn-gold" href="https://rafaelnobre.com.br" target="_blank" rel="noopener">Ver todas as notícias</a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CONTATO ============ -->
 <section class="contato" id="contato">
   <div class="wrap ct-grid">
@@ -939,13 +1001,13 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
         <span class="ct-ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
         <span><b>E-mail</b><span>contato@rafaelnobre.com.br</span></span>
       </a>
-      <a class="ct-card reveal" data-delay="3" href="https://www.instagram.com/rafaelnobre/" target="_blank" rel="noopener">
+      <a class="ct-card reveal" data-delay="3" href="https://www.instagram.com/rafaelnobre.rj/" target="_blank" rel="noopener">
         <span class="ct-ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></span>
-        <span><b>Instagram</b><span>@rafaelnobre</span></span>
+        <span><b>Instagram e Facebook</b><span>@rafaelnobre.rj</span></span>
       </a>
-      <a class="ct-card reveal" data-delay="4" href="https://www.alerj.rj.gov.br" target="_blank" rel="noopener">
+      <a class="ct-card reveal" data-delay="4" href="https://www.alerj.rj.gov.br/Deputados/PerfilDeputado/489?Legislatura=20" target="_blank" rel="noopener">
         <span class="ct-ic"><svg viewBox="0 0 24 24"><path d="M4 21V10l8-6 8 6v11"/><path d="M9 21v-6h6v6"/></svg></span>
-        <span><b>Gabinete na Alerj</b><span>Assembleia Legislativa do Estado do Rio de Janeiro</span></span>
+        <span><b>Gabinete na Alerj</b><span>Perfil oficial na Assembleia Legislativa do RJ</span></span>
       </a>
     </div>
   </div>
@@ -958,8 +1020,11 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
       <div class="ft-logo"><img src="assets/logo-oficial.png" alt="Rafael Nobre, Deputado Estadual"></div>
       <nav class="ft-links" aria-label="Links do rodapé">
         <a href="https://rafaelnobre.com.br" target="_blank" rel="noopener">Site do mandato</a>
-        <a href="https://www.instagram.com/rafaelnobre/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.alerj.rj.gov.br" target="_blank" rel="noopener">Alerj</a>
+        <a href="https://www.instagram.com/rafaelnobre.rj/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/rafaelnobre.rj/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://x.com/rafaelnobre_rj" target="_blank" rel="noopener">X</a>
+        <a href="https://www.alerj.rj.gov.br/Deputados/PerfilDeputado/489?Legislatura=20" target="_blank" rel="noopener">Perfil na Alerj</a>
+        <a href="https://pt.wikipedia.org/wiki/Rafael_Nobre" target="_blank" rel="noopener">Wikipédia</a>
       </nav>
     </div>
     <div class="ft-note">
