@@ -162,12 +162,6 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
 .btn-ghost:hover{background:rgba(127,168,204,.12);transform:translateY(-3px)}
 
 .hero-photo{position:relative;justify-self:center}
-.hero-badge{
-  position:absolute;left:-26px;bottom:38px;background:var(--branco);color:var(--marinho-profundo);
-  font-family:var(--baloo);font-weight:700;font-size:19px;padding:9px 18px;border-radius:999px;
-  transform:rotate(-4deg);box-shadow:5px 5px 0 rgba(0,0,0,.3);z-index:60;
-}
-.hero-badge b{color:var(--ouro)}
 /* skyline */
 .skyline{position:absolute;left:0;right:0;bottom:-2px;z-index:1;opacity:.5}
 .skyline svg{display:block;width:100%;height:110px}
@@ -584,7 +578,6 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 @media (max-width:560px){
   .wrap{padding:0 18px}
   .num-grid,.pl-grid,.bd-grid{grid-template-columns:1fr}
-  .hero-badge{left:-4px;font-size:16px;bottom:26px}
   .ticker span{font-size:18px}
   .hero{padding:110px 0 64px}
   .hero-copy .eyebrow{margin-bottom:20px;font-size:13px}
@@ -781,14 +774,6 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
           <div class="cap"><b>76.706 votos</b><span>A festa da reeleição no Cabuís · 4 de outubro</span></div>
         </figure>
         <figure class="deck-card">
-          <img class="foto-auto" src="assets/foto-frontal.jpg" alt="Rafael Nobre" loading="lazy" onerror="this.closest('.deck-card').classList.add('sem-foto')">
-          <div class="cap"><b>Reeleito</b><span>76.706 votos · segundo mandato na Alerj</span></div>
-        </figure>
-        <figure class="deck-card">
-          <img class="foto-auto" src="assets/foto-terno.jpg" alt="Rafael Nobre de terno entre as bandeiras do Brasil e do Rio de Janeiro" loading="lazy" onerror="this.closest('.deck-card').classList.add('sem-foto')">
-          <div class="cap"><b>Do Cabuís</b><span>à Alerj — sem esquecer de onde veio</span></div>
-        </figure>
-        <figure class="deck-card">
           <img class="foto-auto" src="assets/foto-posse.jpg" alt="Rafael Nobre assina o livro de posse na Alerj" loading="lazy" onerror="this.closest('.deck-card').classList.add('sem-foto')">
           <div class="cap"><b>Posse na Alerj</b><span>Mandato a serviço de Nilópolis e da Baixada</span></div>
         </figure>
@@ -798,9 +783,8 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
         </figure>
       </div>
       <div class="deck-dots" aria-hidden="true">
-        <button class="on" aria-label="Card 1"></button><button aria-label="Card 2"></button><button aria-label="Card 3"></button><button aria-label="Card 4"></button><button aria-label="Card 5"></button><button aria-label="Card 6"></button>
+        <button class="on" aria-label="Card 1"></button><button aria-label="Card 2"></button><button aria-label="Card 3"></button><button aria-label="Card 4"></button>
       </div>
-      <span class="hero-badge">Filho do Cabuís <b>❤</b></span>
     </div>
   </div>
   <div class="skyline" aria-hidden="true">
@@ -861,7 +845,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
     <div class="el-momentos reveal" data-delay="3" id="momentosVitoria" hidden>
       <div class="fotos">
         <figure><img src="assets/momentos/vitoria-1.jpg" alt="Multidão na festa da vitória no Cabuís" loading="lazy"></figure>
-        <figure><img src="assets/momentos/vitoria-2.jpg" alt="Rafael Nobre comemora a reeleição com a comunidade" loading="lazy"></figure>
+        <figure><img src="assets/momentos/vitoria-2.jpg" alt="Rafael Nobre sorri em meio à fumaça azul na festa da reeleição" loading="lazy" style="object-position:center 26%"></figure>
         <figure><img src="assets/momentos/vitoria-3.jpg" alt="Rafael Nobre desce com a família para a festa da reeleição" loading="lazy"></figure>
       </div>
       <p class="legenda">4 de outubro de 2026 — a festa da reeleição no Cabuís, onde tudo começou.</p>
