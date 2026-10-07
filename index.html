@@ -20,20 +20,21 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Rafael Nobre","jobTitle":"Deputado Estadual do Rio de Janeiro","birthDate":"1983-04-15","birthPlace":"Nilópolis, Rio de Janeiro, Brasil","affiliation":{"@type":"Organization","name":"União Brasil"},"url":"https://rafaelnobre.com.br","image":"https://paulolacke-afk.github.io/site-rafael-nobre/assets/foto-oficial.jpg","sameAs":["https://www.instagram.com/rafaelnobre.rj/","https://www.facebook.com/rafaelnobre.rj/","https://x.com/rafaelnobre_rj","https://pt.wikipedia.org/wiki/Rafael_Nobre","https://www.alerj.rj.gov.br/Deputados/PerfilDeputado/489?Legislatura=20"]}
 </script>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='96' fill='%23012141'/%3E%3Cg stroke='%23C79A3D' fill='none' stroke-width='26'%3E%3Cpath d='M64 420 H448'/%3E%3Cpath d='M118 420 L158 168 L232 232'/%3E%3Cpath d='M394 420 L354 168 L280 232'/%3E%3Cpath d='M256 64 L336 144 L256 224 L176 144 Z'/%3E%3Cpath d='M256 268 L296 308 L256 348 L216 308 Z' stroke-width='24'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='96' fill='%23012141'/%3E%3Cg stroke='%235FB2E0' fill='none' stroke-width='26'%3E%3Cpath d='M64 420 H448'/%3E%3Cpath d='M118 420 L158 168 L232 232'/%3E%3Cpath d='M394 420 L354 168 L280 232'/%3E%3Cpath d='M256 64 L336 144 L256 224 L176 144 Z'/%3E%3Cpath d='M256 268 L296 308 L256 348 L216 308 Z' stroke-width='24'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Baloo+2:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ============ TOKENS ============ */
 :root{
-  --marinho-profundo:#12406E;
-  --marinho:#1A5292;
-  --marinho-claro:#2E6DB4;
-  --ceu:#7EB2DD;
-  --ceu-claro:#AFD2EE;
-  --ouro:#D5A94F;
-  --ouro-quente:#EFC880;
+  /* Identidade oficial: dois azuis (marinho da revista + celeste), sem dourado */
+  --marinho-profundo:#22306C;
+  --marinho:#2B3B82;
+  --marinho-claro:#3D52A8;
+  --ceu:#4FA8DC;
+  --ceu-claro:#A9D6F0;
+  --ouro:#1884C0;        /* celeste vivo: cor de ação e destaque */
+  --ouro-quente:#7EC4EC; /* celeste claro: acentos sobre fundo escuro */
   --branco:#FFFFFF;
   --gelo:#F6F9FC;
   --tinta:#1E3A57;
@@ -51,7 +52,7 @@ img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 
-::selection{background:var(--ouro);color:var(--marinho-profundo)}
+::selection{background:var(--ouro);color:#FFFFFF}
 
 /* ============ UTILITIES ============ */
 .eyebrow{
@@ -68,7 +69,7 @@ h2.sec-title{
   color:var(--marinho-profundo);margin:18px 0 14px;
 }
 .sec-title .tarja{
-  display:inline-block;background:var(--ouro);color:var(--marinho-profundo);
+  display:inline-block;background:var(--ouro);color:#FFFFFF;
   padding:0 12px 2px;transform:rotate(-1.2deg);border-radius:4px;
 }
 .sec-title .tarja--ceu{background:var(--ceu)}
@@ -106,7 +107,7 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
 .nav-links a:hover::after,.nav-links a:focus-visible::after{width:100%}
 .nav-cta{
   font-family:var(--cond);font-weight:700;font-size:16px;letter-spacing:.08em;text-transform:uppercase;
-  background:var(--ouro);color:var(--marinho-profundo);text-decoration:none;
+  background:var(--ouro);color:#FFFFFF;text-decoration:none;
   padding:10px 18px;border-radius:6px;box-shadow:0 4px 0 rgba(0,0,0,.25);
   transition:transform .15s ease,box-shadow .15s ease;white-space:nowrap;
 }
@@ -138,7 +139,7 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
   font-size:clamp(64px,11vw,150px);line-height:.92;letter-spacing:.005em;
 }
 .hero-name .l1{display:block;color:var(--branco)}
-.hero-name .l2{display:inline-block;margin-top:10px;background:var(--ouro);color:var(--marinho-profundo);
+.hero-name .l2{display:inline-block;margin-top:10px;background:var(--ouro);color:#FFFFFF;
   padding:2px 22px 6px;transform:rotate(-2deg);border-radius:6px;
   box-shadow:8px 8px 0 rgba(0,0,0,.28);
 }
@@ -153,7 +154,7 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
   font-size:18px;text-decoration:none;padding:15px 28px;border-radius:8px;
   transition:transform .15s ease,box-shadow .15s ease;display:inline-flex;align-items:center;gap:10px;
 }
-.btn-gold{background:var(--ouro);color:var(--marinho-profundo);box-shadow:0 5px 0 rgba(0,0,0,.3)}
+.btn-gold{background:var(--ouro);color:#FFFFFF;box-shadow:0 5px 0 rgba(0,0,0,.3)}
 .btn-gold:hover{transform:translateY(-3px);box-shadow:0 8px 0 rgba(0,0,0,.3)}
 .btn-ghost{border:2px solid var(--ceu);color:var(--ceu-claro)}
 .btn-ghost:hover{background:rgba(127,168,204,.12);transform:translateY(-3px)}
@@ -179,7 +180,7 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
 
 /* ============ TICKER ============ */
 .ticker{
-  background:var(--ouro);color:var(--marinho-profundo);overflow:hidden;
+  background:var(--ouro);color:#FFFFFF;overflow:hidden;
   transform:rotate(-1.2deg) scale(1.02);margin:-26px 0 0;position:relative;z-index:5;
   box-shadow:0 10px 30px rgba(11,36,64,.25);
 }
@@ -189,7 +190,7 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
   font-family:var(--anton);font-size:22px;letter-spacing:.06em;text-transform:uppercase;
   padding:0 26px;white-space:nowrap;
 }
-.ticker b{color:var(--marinho);font-weight:400}
+.ticker b{color:#BFE3F7;font-weight:400}
 @keyframes ticker{to{transform:translateX(-50%)}}
 
 /* ============ NUMBERS ============ */
@@ -258,7 +259,7 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
 .tl-item p{color:#BCCCDE;max-width:640px;font-size:16.5px}
 .tl-votos{
   display:inline-block;margin-left:10px;font-family:var(--cond);font-weight:700;font-size:15px;
-  letter-spacing:.06em;background:rgba(199,154,61,.2);color:var(--ouro-quente);
+  letter-spacing:.06em;background:rgba(24,132,192,.25);color:var(--ouro-quente);
   border:1px solid rgba(199,154,61,.5);padding:1px 12px;border-radius:999px;vertical-align:middle;
 }
 
@@ -272,7 +273,7 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
 }
 .pl-card:hover{transform:translateY(-7px);box-shadow:0 22px 44px rgba(30,42,56,.16)}
 .pl-stamp{
-  position:absolute;top:18px;right:-40px;background:var(--ouro);color:var(--marinho-profundo);
+  position:absolute;top:18px;right:-40px;background:var(--ouro);color:#FFFFFF;
   font-family:var(--cond);font-weight:700;font-size:13.5px;letter-spacing:.16em;
   padding:5px 46px;transform:rotate(35deg);box-shadow:0 3px 8px rgba(0,0,0,.15);
   transition:transform .25s ease;
@@ -335,9 +336,9 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
 }
 .terr-word.spot{
   transform:translateX(16px);
-  filter:drop-shadow(0 10px 34px rgba(199,154,61,.28));
+  filter:drop-shadow(0 10px 34px rgba(24,132,192,.30));
   color:transparent;-webkit-text-stroke-color:transparent;
-  background:linear-gradient(100deg,#a87f2e,#c79a3d 25%,#f4e3bb 50%,#c79a3d 75%,#a87f2e);
+  background:linear-gradient(100deg,#0F5E8C,#1884C0 25%,#C9E8FA 50%,#1884C0 75%,#0F5E8C);
   background-size:200% auto;-webkit-background-clip:text;background-clip:text;
   animation:shine 2.8s linear infinite;
 }
@@ -468,13 +469,13 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
 /* ============ CONTATO ============ */
 .contato{
   background:
-    radial-gradient(800px 400px at 85% 0%,rgba(227,184,92,.18),transparent 60%),
+    radial-gradient(800px 400px at 85% 0%,rgba(79,168,220,.20),transparent 60%),
     linear-gradient(150deg,var(--marinho-profundo),var(--marinho));
   color:var(--branco);padding:110px 0;position:relative;overflow:hidden;
 }
 .ct-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
 .ct-title{font-family:var(--anton);font-size:clamp(38px,5.5vw,64px);text-transform:uppercase;line-height:1.02;color:var(--branco)}
-.ct-title .tarja{display:inline-block;background:var(--ouro);color:var(--marinho-profundo);padding:0 14px 4px;transform:rotate(-1.5deg);border-radius:5px}
+.ct-title .tarja{display:inline-block;background:var(--ouro);color:#FFFFFF;padding:0 14px 4px;transform:rotate(-1.5deg);border-radius:5px}
 .ct-sub{margin-top:18px;color:#C7D4E4;font-size:18px;max-width:480px}
 .ct-actions{margin-top:34px;display:flex;gap:16px;flex-wrap:wrap}
 .ct-cards{display:grid;gap:16px}
@@ -485,7 +486,7 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
 }
 .ct-card:hover{background:rgba(255,255,255,.12);transform:translateX(6px)}
 .ct-ic{width:46px;height:46px;border-radius:12px;background:var(--ouro);display:grid;place-items:center;flex-shrink:0}
-.ct-ic svg{width:24px;height:24px;stroke:var(--marinho-profundo);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ct-ic svg{width:24px;height:24px;stroke:#FFFFFF;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .ct-card b{font-family:var(--cond);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:16px;display:block}
 .ct-card span{color:#BCCCDE;font-size:15px}
 
@@ -539,12 +540,12 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 }
 /* cards de marca (números do mandato) */
 .deck-card--brand{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:30px 26px;gap:4px}
-.deck-card--brand.gold{background:linear-gradient(160deg,var(--ouro),#a87f2e)}
+.deck-card--brand.gold{background:linear-gradient(160deg,#1884C0,#0F5E8C)}
 .deck-card--brand .coroa{position:absolute;right:-30px;bottom:-24px;width:200px;opacity:.14}
 .deck-card--brand .big{font-family:var(--anton);font-size:64px;line-height:1;color:var(--ouro-quente)}
-.deck-card--brand.gold .big{color:var(--marinho-profundo)}
+.deck-card--brand.gold .big{color:#FFFFFF}
 .deck-card--brand .lbl{font-family:var(--cond);font-weight:700;font-size:19px;letter-spacing:.06em;text-transform:uppercase;color:#fff;max-width:14ch;line-height:1.25}
-.deck-card--brand.gold .lbl{color:var(--marinho-profundo)}
+.deck-card--brand.gold .lbl{color:#E3F2FC}
 .deck-dots{display:flex;gap:8px;justify-content:center;margin-top:24px}
 .deck-dots button{
   width:8px;height:8px;border-radius:999px;border:0;background:rgba(255,255,255,.28);
@@ -612,7 +613,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 }
 
 /* ============ SELO REELEITO ============ */
-.hero-selo{display:inline-flex;align-items:center;gap:10px;margin:2px 0 18px;padding:9px 18px 8px;border-radius:999px;background:linear-gradient(120deg,#0C5435,#127148);color:#fff;font-family:var(--cond);font-weight:700;font-size:17px;letter-spacing:.09em;text-transform:uppercase;box-shadow:0 10px 26px rgba(4,38,19,.45);position:relative;overflow:hidden}
+.hero-selo{display:inline-flex;align-items:center;gap:10px;margin:2px 0 18px;padding:9px 18px 8px;border-radius:999px;background:linear-gradient(120deg,#0F6FA6,#1884C0);color:#fff;font-family:var(--cond);font-weight:700;font-size:17px;letter-spacing:.09em;text-transform:uppercase;box-shadow:0 10px 26px rgba(4,38,19,.45);position:relative;overflow:hidden}
 .hero-selo svg{width:17px;height:17px;flex:none}
 .hero-selo b{color:#FFFFFF;font-weight:700}
 .hero-selo::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent);animation:selo-shine 3.6s ease-in-out infinite}
@@ -626,8 +627,8 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 .el-col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:10px;height:100%}
 .el-val{font-family:var(--cond);font-weight:700;font-size:clamp(16px,2vw,22px);color:#fff;opacity:0;transform:translateY(8px);transition:opacity .4s ease .25s,transform .4s ease .25s}
 .el-col.destaque .el-val{color:#FFFFFF;font-size:clamp(20px,2.4vw,28px)}
-.el-bar{flex:none;width:100%;max-width:120px;border-radius:10px 10px 4px 4px;background:linear-gradient(180deg,#5E8FC4,#2E6DB4);transform:scaleY(0);transform-origin:bottom;transition:transform 1.25s cubic-bezier(.22,.9,.26,1)}
-.el-col.destaque .el-bar{background:linear-gradient(180deg,#DCEDFB,#7EB2DD);box-shadow:0 0 44px rgba(175,210,238,.35)}
+.el-bar{flex:none;width:100%;max-width:120px;border-radius:10px 10px 4px 4px;background:linear-gradient(180deg,#4A5FA8,#2B3B82);transform:scaleY(0);transform-origin:bottom;transition:transform 1.25s cubic-bezier(.22,.9,.26,1)}
+.el-col.destaque .el-bar{background:linear-gradient(180deg,#7EC8F5,#1884C0);box-shadow:0 0 44px rgba(24,132,192,.45)}
 .el-chart.is-in .el-bar{transform:scaleY(1)}
 .el-chart.is-in .el-val{opacity:1;transform:none}
 .el-col:nth-child(2) .el-bar{transition-delay:.18s}
@@ -685,6 +686,26 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
   .el-chart.is-in .el-col.destaque .el-bar,.eleicao::before,.deck{animation:none}
   .tl-list::before,.tl-item::before{transform:none;opacity:1;transition:none}
 }
+
+/* ============ CONQUISTAS ============ */
+.conquistas{background:var(--gelo);padding:96px 0}
+.cq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:42px}
+.cq-card{background:var(--branco);border:1px solid #E2EAF2;border-left:5px solid var(--ouro);border-radius:12px;padding:18px 20px 16px;transition:transform .22s ease,box-shadow .22s ease}
+.cq-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(34,48,108,.12)}
+.cq-tag{font-family:var(--cond);font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ouro)}
+.cq-card h3{font-family:var(--cond);font-weight:700;font-size:19.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--marinho-profundo);margin:6px 0 6px;line-height:1.2}
+.cq-card p{font-size:14.5px;color:var(--tinta-suave);line-height:1.5}
+@media (max-width:980px){.cq-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.cq-grid{grid-template-columns:1fr}}
+
+/* galeria da vitória */
+.el-momentos{margin-top:34px}
+.el-momentos .fotos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.el-momentos figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.14);aspect-ratio:4/3}
+.el-momentos img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.el-momentos figure:hover img{transform:scale(1.05)}
+.el-momentos .legenda{margin-top:12px;font-size:14px;color:#A9C4DC}
+@media (max-width:700px){.el-momentos .fotos{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -702,7 +723,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
         <li><a href="#eleicao">Eleição 2026</a></li>
         <li><a href="#trajetoria">Trajetória</a></li>
         <li><a href="#projetos">Leis</a></li>
-        <li><a href="#bandeiras">Bandeiras</a></li>
+        <li><a href="#conquistas">Conquistas</a></li>
         <li><a href="#territorio">Raízes</a></li>
         <li><a href="#noticias">Notícias</a></li>
         <li><a href="#contato">Contato</a></li>
@@ -718,7 +739,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
   <a href="#eleicao">Eleição 2026</a>
   <a href="#trajetoria">Trajetória</a>
   <a href="#projetos">Leis</a>
-  <a href="#bandeiras">Bandeiras</a>
+  <a href="#conquistas">Conquistas</a>
   <a href="#territorio">Raízes</a>
   <a href="#noticias">Notícias</a>
   <a href="#contato">Contato</a>
@@ -750,16 +771,16 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
           <div class="cap"><b>Rafael Nobre</b><span>Deputado Estadual · Rio de Janeiro</span></div>
         </figure>
         <figure class="deck-card deck-card--brand">
-          <svg class="coroa" viewBox="240 0 280 200" aria-hidden="true"><g stroke="#C79A3D" fill="none" stroke-width="10"><path d="M262 170 L286 40 L330 76"/><path d="M330 76 C 324 116, 330 146, 354 151 C 366 153, 372 145, 369 134"/><path d="M498 170 L474 40 L430 76"/><path d="M430 76 C 436 116, 430 146, 406 151 C 394 153, 388 145, 391 134"/><path d="M380 16 L424 60 L380 104 L336 60 Z"/><path d="M380 122 L398 140 L380 158 L362 140 Z" stroke-width="9"/></g></svg>
+          <svg class="coroa" viewBox="240 0 280 200" aria-hidden="true"><g stroke="#7EC8F5" fill="none" stroke-width="10"><path d="M262 170 L286 40 L330 76"/><path d="M330 76 C 324 116, 330 146, 354 151 C 366 153, 372 145, 369 134"/><path d="M498 170 L474 40 L430 76"/><path d="M430 76 C 436 116, 430 146, 406 151 C 394 153, 388 145, 391 134"/><path d="M380 16 L424 60 L380 104 L336 60 Z"/><path d="M380 122 L398 140 L380 158 L362 140 Z" stroke-width="9"/></g></svg>
           <span class="big">76.706</span>
           <span class="lbl">votos em 2026 · reeleito para o segundo mandato</span>
         </figure>
         <figure class="deck-card deck-card--brand gold">
-          <span class="big">7 leis</span>
-          <span class="lbl">sancionadas protegendo crianças, mulheres e idosos</span>
+          <span class="big">23</span>
+          <span class="lbl">projetos e leis pelo Rio — da moradia acessível à Casa do Autista</span>
         </figure>
         <figure class="deck-card deck-card--brand">
-          <svg class="coroa" viewBox="240 0 280 200" aria-hidden="true"><g stroke="#C79A3D" fill="none" stroke-width="10"><path d="M262 170 L286 40 L330 76"/><path d="M330 76 C 324 116, 330 146, 354 151 C 366 153, 372 145, 369 134"/><path d="M498 170 L474 40 L430 76"/><path d="M430 76 C 436 116, 430 146, 406 151 C 394 153, 388 145, 391 134"/><path d="M380 16 L424 60 L380 104 L336 60 Z"/><path d="M380 122 L398 140 L380 158 L362 140 Z" stroke-width="9"/></g></svg>
+          <svg class="coroa" viewBox="240 0 280 200" aria-hidden="true"><g stroke="#7EC8F5" fill="none" stroke-width="10"><path d="M262 170 L286 40 L330 76"/><path d="M330 76 C 324 116, 330 146, 354 151 C 366 153, 372 145, 369 134"/><path d="M498 170 L474 40 L430 76"/><path d="M430 76 C 436 116, 430 146, 406 151 C 394 153, 388 145, 391 134"/><path d="M380 16 L424 60 L380 104 L336 60 Z"/><path d="M380 122 L398 140 L380 158 L362 140 Z" stroke-width="9"/></g></svg>
           <span class="big">Do Cabuís</span>
           <span class="lbl">à Alerj — sem esquecer de onde veio</span>
         </figure>
@@ -825,6 +846,14 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
       </div>
     </div>
     <p class="el-fonte reveal" data-delay="2">Fonte: apuração oficial do TSE — eleições de 4 de outubro de 2026. Novo mandato a partir de fevereiro de 2027.</p>
+    <div class="el-momentos reveal" data-delay="3" id="momentosVitoria" hidden>
+      <div class="fotos">
+        <figure><img src="assets/momentos/vitoria-1.jpg" alt="Multidão na festa da vitória no Cabuís" loading="lazy"></figure>
+        <figure><img src="assets/momentos/vitoria-2.jpg" alt="Rafael Nobre comemora a reeleição com a comunidade" loading="lazy"></figure>
+        <figure><img src="assets/momentos/vitoria-3.jpg" alt="Fogos na celebração da reeleição no Cabuís" loading="lazy"></figure>
+      </div>
+      <p class="legenda">4 de outubro de 2026 — a festa da reeleição no Cabuís, onde tudo começou.</p>
+    </div>
   </div>
 </section>
 
@@ -839,19 +868,19 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
         <div class="num-label">votos em 2026 — reeleito para o segundo mandato</div>
       </div>
       <div class="num-card reveal" data-delay="2">
-        <div class="num-value"><span class="counter" data-target="7">0</span></div>
-        <div class="num-label">leis sancionadas e em vigor</div>
+        <div class="num-value"><span class="counter" data-target="23">0</span></div>
+        <div class="num-label">projetos e leis apresentados na Alerj</div>
       </div>
       <div class="num-card reveal" data-delay="3">
-        <div class="num-value"><span class="counter" data-target="30">0</span>+</div>
-        <div class="num-label">projetos de lei em educação, saúde e inclusão</div>
+        <div class="num-value"><span class="counter" data-target="141">0</span></div>
+        <div class="num-label">indicações parlamentares — demanda de bairro virando ação</div>
       </div>
       <div class="num-card reveal" data-delay="4">
-        <div class="num-value">2</div>
-        <div class="num-label">comissões como titular na Alerj: Educação e Defesa Civil</div>
+        <div class="num-value">R$ <span class="counter" data-target="140">0</span>+<span style="font-size:.55em"> mi</span></div>
+        <div class="num-label">em investimentos conquistados junto ao Governo do Estado</div>
       </div>
     </div>
-    <p class="num-note reveal" data-delay="3">Fontes: <a href="https://www.alerj.rj.gov.br" target="_blank" rel="noopener">Alerj</a> e <a href="https://rafaelnobre.com.br" target="_blank" rel="noopener">site oficial do mandato</a>; resultados eleitorais: apuração oficial do TSE (2026).</p>
+    <p class="num-note reveal" data-delay="3">Fontes: <a href="https://www.alerj.rj.gov.br" target="_blank" rel="noopener">Alerj</a> e <a href="https://rafaelnobre.com.br" target="_blank" rel="noopener">site oficial do mandato</a>; resultados eleitorais: apuração oficial do TSE (2026). São ainda <b>R$ 10 milhões em emendas parlamentares</b> destinadas à saúde e à região.</p>
   </div>
 </section>
 
@@ -873,7 +902,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
         <p>Em 2022, deu o passo seguinte: <strong>51.563 votos</strong> o levaram à Assembleia Legislativa do Rio, como o mais votado do município. Na Alerj, é titular das comissões de <strong>Educação</strong> e <strong>Defesa Civil</strong> e Segundo Vogal da Mesa Diretora. Em Brasília, conquistou <strong>emendas parlamentares para a saúde de Nilópolis</strong>; junto ao Governo do Estado, ajudou a garantir um dos maiores pacotes de obras já realizados no município.</p>
         <p>Em outubro de 2026, as urnas confirmaram o caminho: <strong>reeleito com 76.706 votos</strong>, 25.143 a mais que em 2022 — a maior votação da sua trajetória. O segundo mandato na Alerj começa em fevereiro de 2027.</p>
       </div>
-      <p class="bio-quote reveal" data-delay="3">Mandato bom é o que volta para a rua: em forma de lei, de obra e de cuidado com as pessoas.</p>
+      <p class="bio-quote reveal" data-delay="3">Nosso compromisso é ouvir, agir e transformar demandas em conquistas.</p>
     </div>
   </div>
 </section>
@@ -923,53 +952,76 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
   <div class="wrap">
     <span class="eyebrow reveal">Leis e projetos</span>
     <h2 class="sec-title reveal" data-delay="1">Palavra que vira <span class="tarja">lei</span></h2>
-    <p class="sec-lead reveal" data-delay="2">São 7 leis sancionadas e mais de 30 projetos apresentados. Alguns destaques, explicados em bom português:</p>
+    <p class="sec-lead reveal" data-delay="2">São 23 projetos e leis no mandato estadual — vários já em vigor no Rio inteiro. Destaques, explicados em bom português:</p>
     <div class="pl-grid">
       <a class="pl-card reveal" data-delay="1" href="https://rafaelnobre.com.br/conheca-as-leis-de-autoria-de-rafael-nobre/" target="_blank" rel="noopener">
         <span class="pl-stamp">Lei em vigor</span>
-        <span class="pl-num">Lei 6.692/22</span>
-        <span class="pl-tag">Proteção infantil</span>
-        <p>“Urna do Desabafo”: canal seguro nas escolas para crianças relatarem violência e pedirem ajuda — proteção onde ela mais alcança.</p>
+        <span class="pl-num">Lei 10.183/23</span>
+        <span class="pl-tag">Inclusão</span>
+        <p>Programa Estadual de Adaptação de Moradias: casas adaptadas para pessoas com deficiência ou mobilidade reduzida viverem com autonomia.</p>
         <span class="pl-link">Conhecer a lei</span>
       </a>
       <a class="pl-card reveal" data-delay="2" href="https://rafaelnobre.com.br/conheca-as-leis-de-autoria-de-rafael-nobre/" target="_blank" rel="noopener">
         <span class="pl-stamp">Lei em vigor</span>
-        <span class="pl-num">Lei 6.694/22</span>
-        <span class="pl-tag">Direitos da mulher</span>
-        <p>Cria a rede de apoio à mulher vítima de violência, integrando poder público e comunidade no acolhimento e na proteção.</p>
+        <span class="pl-num">Lei 10.719/25</span>
+        <span class="pl-tag">Saúde</span>
+        <p>Autoriza a criação de Clínicas Estaduais de Fisioterapia e Reabilitação Motora em todo o Estado do Rio de Janeiro.</p>
         <span class="pl-link">Conhecer a lei</span>
       </a>
       <a class="pl-card reveal" data-delay="3" href="https://rafaelnobre.com.br/conheca-as-leis-de-autoria-de-rafael-nobre/" target="_blank" rel="noopener">
         <span class="pl-stamp">Lei em vigor</span>
-        <span class="pl-num">Lei 6.587/19</span>
-        <span class="pl-tag">Educação</span>
-        <p>Programa permanente de combate ao bullying nas escolas, cuidando da segurança e da saúde emocional dos alunos.</p>
+        <span class="pl-num">Lei 10.761/25</span>
+        <span class="pl-tag">Defesa Civil</span>
+        <p>“Morar Seguro”: política permanente de prevenção de desastres em áreas de risco, com contenção de encostas, drenagem e infraestrutura preventiva.</p>
         <span class="pl-link">Conhecer a lei</span>
       </a>
       <a class="pl-card reveal" data-delay="1" href="https://rafaelnobre.com.br/conheca-as-leis-de-autoria-de-rafael-nobre/" target="_blank" rel="noopener">
         <span class="pl-stamp">Lei em vigor</span>
-        <span class="pl-num">Lei 6.629/21</span>
-        <span class="pl-tag">Inclusão</span>
-        <p>Garante direitos e atendimento adequado às pessoas com Transtorno do Espectro Autista e às suas famílias.</p>
+        <span class="pl-num">Lei 11.026/25</span>
+        <span class="pl-tag">Cultura</span>
+        <p>Institui o Dia do Artista da Baixada Fluminense, celebrado em 24 de outubro no calendário oficial do Estado do Rio.</p>
         <span class="pl-link">Conhecer a lei</span>
       </a>
       <a class="pl-card reveal" data-delay="2" href="https://www.alerj.rj.gov.br" target="_blank" rel="noopener">
         <span class="pl-stamp pl-stamp--tram">Na Alerj</span>
-        <span class="pl-num">PL 7.056/2026</span>
-        <span class="pl-tag">Pessoa idosa</span>
-        <p>Institui o Dia do Atleta Idoso no calendário oficial do RJ, celebrado em 16 de junho: esporte, saúde e convivência para quem já contribuiu tanto.</p>
+        <span class="pl-num">PL 1.813/23</span>
+        <span class="pl-tag">Inclusão</span>
+        <p>“Casa do Autista”: cria o Centro de Referência da Pessoa com Transtorno do Espectro Autista no Estado do Rio.</p>
         <span class="pl-link">Ver na Alerj</span>
       </a>
       <a class="pl-card reveal" data-delay="3" href="https://www.alerj.rj.gov.br" target="_blank" rel="noopener">
         <span class="pl-stamp pl-stamp--tram">Na Alerj</span>
-        <span class="pl-num">PL 7.142/2026</span>
-        <span class="pl-tag">Sustentabilidade</span>
-        <p>Garante o direito à instalação de ponto de recarga para veículos elétricos em condomínios de todo o estado do Rio.</p>
+        <span class="pl-num">PL 3.526/24</span>
+        <span class="pl-tag">Saúde</span>
+        <p>Equipara a pessoa com fibromialgia à pessoa com deficiência, garantindo acesso a direitos em todo o Estado.</p>
         <span class="pl-link">Ver na Alerj</span>
       </a>
     </div>
     <div class="pl-all reveal">
       <a class="btn btn-gold" href="https://rafaelnobre.com.br/conheca-as-leis-de-autoria-de-rafael-nobre/" target="_blank" rel="noopener">Ver todas as leis e projetos</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONQUISTAS ============ -->
+<section class="conquistas" id="conquistas">
+  <div class="wrap">
+    <span class="eyebrow reveal">Entregas do mandato</span>
+    <h2 class="sec-title reveal" data-delay="1">Trabalho que virou <span class="tarja">conquista</span></h2>
+    <p class="sec-lead reveal" data-delay="2">Investimentos, obras e programas conquistados com articulação em Brasília e no Governo do Estado — para Nilópolis e toda a Baixada Fluminense.</p>
+    <div class="cq-grid">
+      <div class="cq-card reveal" data-delay="1"><span class="cq-tag">Saúde</span><h3>Hospital e Maternidade JK reaberto</h3><p>Atendimentos de volta, maternidade devolvida à população, CTI implantado e cirurgias eletivas em funcionamento.</p></div>
+      <div class="cq-card reveal" data-delay="2"><span class="cq-tag">Saúde</span><h3>UPA do Cabuís modernizada</h3><p>Emenda de R$ 3,5 milhões: tomógrafo de 128 canais e oferta de exames de colonoscopia e endoscopia.</p></div>
+      <div class="cq-card reveal" data-delay="3"><span class="cq-tag">Saúde</span><h3>Van para transporte de pacientes</h3><p>Van climatizada para 16 passageiros, conquistada por emenda parlamentar, com mais conforto e segurança.</p></div>
+      <div class="cq-card reveal" data-delay="1"><span class="cq-tag">Mobilidade</span><h3>Via Light revitalizada</h3><p>Recapeamento, contenção de encostas, iluminação em LED, novos pontos de ônibus e passarelas reformadas.</p></div>
+      <div class="cq-card reveal" data-delay="2"><span class="cq-tag">Segurança</span><h3>BPVE na Via Light</h3><p>Posto avançado inaugurado e policiamento reforçado em uma das principais vias da Baixada Fluminense.</p></div>
+      <div class="cq-card reveal" data-delay="3"><span class="cq-tag">Alimentação</span><h3>Restaurante do Povo</h3><p>2 mil refeições por dia em Nilópolis — café da manhã, almoço e jantar por R$ 0,50 e R$ 1,00.</p></div>
+      <div class="cq-card reveal" data-delay="1"><span class="cq-tag">Alimentação</span><h3>Café do Trabalhador</h3><p>Café da manhã completo por R$ 0,50 para quem sai cedo: café ou café com leite, pão com manteiga e fruta.</p></div>
+      <div class="cq-card reveal" data-delay="2"><span class="cq-tag">Defesa Civil</span><h3>68 obras de contenção de encostas</h3><p>Tranquilidade devolvida às famílias e mais segurança nas áreas de risco de Nilópolis.</p></div>
+      <div class="cq-card reveal" data-delay="3"><span class="cq-tag">Meio ambiente</span><h3>Limpeza e dragagem dos rios</h3><p>Rios Pavuna e Sarapuí desassoreados, reduzindo o risco de alagamentos em Nilópolis e região.</p></div>
+      <div class="cq-card reveal" data-delay="1"><span class="cq-tag">Defesa Civil</span><h3>Reforço na barragem do Gericinó</h3><p>Estrutura reforçada e capacidade de escoamento ampliada: mais proteção contra enchentes.</p></div>
+      <div class="cq-card reveal" data-delay="2"><span class="cq-tag">Mobilidade</span><h3>Recapeamento e calçamento</h3><p>Asfalto novo, pintura viária e calçadas revitalizadas em diversos bairros, com mais mobilidade e segurança.</p></div>
+      <div class="cq-card reveal" data-delay="3"><span class="cq-tag">Educação</span><h3>FAETEC de Nilópolis reaberta</h3><p>Depois de sete anos fechada, a unidade voltou a oferecer cursos gratuitos de qualificação profissional.</p></div>
     </div>
   </div>
 </section>
@@ -1303,6 +1355,23 @@ var WHATSAPP_GABINETE = "5521999999999"; // DDI+DDD+número, só dígitos
     dots.forEach(function(d,i){ d.addEventListener("click", function(e){ e.stopPropagation(); go(i); start(); }); });
   })();
 
+  /* galeria da vitoria: aparece apenas quando as fotos estiverem na pasta */
+  (function(){
+    var box = document.getElementById("momentosVitoria");
+    if(!box) return;
+    var figs = [].slice.call(box.querySelectorAll("figure")), vivas = 0, resolvidas = 0;
+    figs.forEach(function(f){
+      var img = f.querySelector("img"), marca = function(ok){
+        resolvidas++; if(ok) vivas++; else f.hidden = true;
+        if(resolvidas === figs.length && vivas > 0) box.hidden = false;
+      };
+      var teste = new Image();
+      teste.onload = function(){ marca(true); };
+      teste.onerror = function(){ marca(false); };
+      teste.src = img.getAttribute("src");
+    });
+  })();
+
   /* secoes que disparam animacoes proprias ao entrar (linha da trajetoria) */
   var secIO = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
@@ -1357,7 +1426,7 @@ var WHATSAPP_GABINETE = "5521999999999"; // DDI+DDD+número, só dígitos
       {name:"Fernanda", area:"São João de Meriti", time:"11 min", a:"ouro", text:"Queria levar a palestra de combate ao bullying para a escola dos meus filhos."}
     ];
     var AV = {
-      ouro:"linear-gradient(145deg,#E3B85C,#C79A3D)",
+      ouro:"linear-gradient(145deg,#4FA8DC,#1884C0)",
       ceu:"linear-gradient(145deg,#7FA8CC,#1E4E7A)",
       marinho:"linear-gradient(145deg,#12385B,#0B2440)"
     };
