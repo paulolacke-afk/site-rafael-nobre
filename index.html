@@ -6,17 +6,19 @@
 <title>Rafael Nobre | Deputado Estadual Reeleito · RJ</title>
 <meta name="description" content="Rafael Nobre, deputado estadual reeleito em 2026 com 76.706 votos. Filho do Cabuís, em Nilópolis: o mais votado da história do município. Por Nilópolis, pela Baixada e pelo Rio de Janeiro.">
 <meta name="author" content="Gabinete do Deputado Estadual Rafael Nobre">
-<meta name="theme-color" content="#12406E">
+<meta name="theme-color" content="#22306C">
 <link rel="canonical" href="https://paulolacke-afk.github.io/site-rafael-nobre/">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://paulolacke-afk.github.io/site-rafael-nobre/">
 <meta property="og:title" content="Rafael Nobre | Deputado Estadual Reeleito · RJ">
 <meta property="og:description" content="Reeleito em 2026 com 76.706 votos. Filho do Cabuís, em Nilópolis. Por Nilópolis, pela Baixada e pelo Rio de Janeiro.">
-<meta property="og:image" content="https://paulolacke-afk.github.io/site-rafael-nobre/assets/foto-oficial.jpg">
+<meta property="og:image" content="https://paulolacke-afk.github.io/site-rafael-nobre/assets/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Rafael Nobre | Deputado Estadual Reeleito · RJ">
-<meta name="twitter:image" content="https://paulolacke-afk.github.io/site-rafael-nobre/assets/foto-oficial.jpg">
+<meta name="twitter:image" content="https://paulolacke-afk.github.io/site-rafael-nobre/assets/og-card.jpg">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Rafael Nobre","jobTitle":"Deputado Estadual do Rio de Janeiro","birthDate":"1983-04-15","birthPlace":"Nilópolis, Rio de Janeiro, Brasil","affiliation":{"@type":"Organization","name":"União Brasil"},"url":"https://rafaelnobre.com.br","image":"https://paulolacke-afk.github.io/site-rafael-nobre/assets/foto-oficial.jpg","sameAs":["https://www.instagram.com/rafaelnobre.rj/","https://www.facebook.com/rafaelnobre.rj/","https://x.com/rafaelnobre_rj","https://pt.wikipedia.org/wiki/Rafael_Nobre","https://www.alerj.rj.gov.br/Deputados/PerfilDeputado/489?Legislatura=20"]}
 </script>
@@ -106,7 +108,7 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
   text-transform:uppercase;color:var(--branco);text-decoration:none;position:relative;padding:4px 0;
 }
 .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:3px;background:var(--ouro);border-radius:2px;transition:width .25s ease}
-.nav-links a:hover::after,.nav-links a:focus-visible::after{width:100%}
+.nav-links a:hover::after,.nav-links a:focus-visible::after,.nav-links a.ativa::after{width:100%}
 .nav-cta{
   font-family:var(--cond);font-weight:700;font-size:16px;letter-spacing:.08em;text-transform:uppercase;
   background:var(--ouro);color:#FFFFFF;text-decoration:none;
@@ -123,7 +125,7 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
   position:relative;min-height:100svh;display:flex;align-items:center;
   background:
     radial-gradient(1200px 600px at 80% -10%,rgba(127,168,204,.20),transparent 60%),
-    radial-gradient(900px 500px at -10% 110%,rgba(199,154,61,.14),transparent 55%),
+    radial-gradient(900px 500px at -10% 110%,rgba(24,132,192,.16),transparent 55%),
     linear-gradient(160deg,var(--marinho-profundo) 0%,var(--marinho) 70%,#0E2E4C 100%);
   color:var(--branco);overflow:hidden;padding:130px 0 80px;
 }
@@ -225,8 +227,13 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
 .bio p{margin-bottom:16px;font-size:17.5px}
 .bio p strong{color:var(--marinho-profundo)}
 .bio-quote{
-  font-family:var(--baloo);font-weight:600;font-size:22px;color:var(--marinho);
-  border-left:5px solid var(--ouro);padding-left:18px;margin:26px 0 0;
+  position:relative;font-family:var(--baloo);font-weight:600;font-size:23px;line-height:1.45;
+  color:var(--marinho);background:var(--gelo);border-radius:14px;
+  padding:24px 28px 22px 66px;margin:28px 0 0;
+}
+.bio-quote::before{
+  content:"\201C";position:absolute;left:18px;top:4px;
+  font-family:var(--anton);font-size:74px;line-height:1;color:var(--ouro);
 }
 
 /* ============ TIMELINE ============ */
@@ -254,7 +261,7 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
 .tl-votos{
   display:inline-block;margin-left:10px;font-family:var(--cond);font-weight:700;font-size:15px;
   letter-spacing:.06em;background:rgba(24,132,192,.25);color:var(--ouro-quente);
-  border:1px solid rgba(199,154,61,.5);padding:1px 12px;border-radius:999px;vertical-align:middle;
+  border:1px solid rgba(24,132,192,.55);padding:1px 12px;border-radius:999px;vertical-align:middle;
 }
 
 /* ============ PROJETOS ============ */
@@ -293,9 +300,12 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
   transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;background:var(--branco);
 }
 .bd-card:hover{border-color:var(--ouro);transform:translateY(-5px);box-shadow:0 16px 36px rgba(30,42,56,.10)}
+.bd-card:hover .bd-icon{background:var(--ouro)}
+.bd-card:hover .bd-icon svg{stroke:#FFFFFF}
 .bd-icon{
   width:58px;height:58px;border-radius:14px;display:grid;place-items:center;margin-bottom:18px;
   background:linear-gradient(145deg,var(--marinho),var(--marinho-claro));
+  transition:background .25s ease;
 }
 .bd-icon svg{width:30px;height:30px;stroke:var(--ouro-quente);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .bd-card h3{font-family:var(--cond);font-weight:700;font-size:22px;letter-spacing:.04em;text-transform:uppercase;color:var(--marinho-profundo);margin-bottom:6px}
@@ -308,7 +318,7 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
 }
 .territorio::after{
   content:"";position:absolute;left:0;right:0;bottom:0;height:120px;
-  background-image:radial-gradient(rgba(199,154,61,.5) 1.2px,transparent 1.5px);
+  background-image:radial-gradient(rgba(24,132,192,.5) 1.2px,transparent 1.5px);
   background-size:18px 18px;opacity:.25;
   mask-image:linear-gradient(transparent,black);-webkit-mask-image:linear-gradient(transparent,black);
 }
@@ -325,7 +335,7 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
   content:"";position:absolute;left:-30px;top:50%;
   transform:translateY(-50%) scale(.4);
   width:13px;height:13px;border-radius:50%;background:var(--ouro-quente);opacity:0;
-  box-shadow:0 0 18px rgba(199,154,61,.95);
+  box-shadow:0 0 18px rgba(126,196,236,.95);
   transition:opacity .4s ease,transform .4s ease;
 }
 .terr-word.spot{
@@ -398,7 +408,7 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
 @keyframes caret{50%{opacity:0}}
 .fone-send{
   width:40px;height:40px;border-radius:50%;border:0;background:var(--ouro);cursor:default;
-  display:grid;place-items:center;box-shadow:0 4px 12px rgba(199,154,61,.4);
+  display:grid;place-items:center;box-shadow:0 4px 12px rgba(24,132,192,.45);
   transition:transform .2s ease;flex-shrink:0;
 }
 .fone-send svg{width:19px;height:19px;fill:var(--marinho-profundo)}
@@ -706,6 +716,33 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 .el-momentos figure:hover img{transform:scale(1.05)}
 .el-momentos .legenda{margin-top:12px;font-size:14px;color:#A9C4DC}
 @media (max-width:700px){.el-momentos .fotos{grid-template-columns:1fr}}
+
+/* ============ POLIMENTO v4 ============ */
+.hero .aurora{position:absolute;inset:-18%;pointer-events:none;filter:blur(72px);opacity:.5;z-index:0}
+.hero .aurora::before,.hero .aurora::after{content:"";position:absolute;width:54vw;height:54vw;min-width:480px;min-height:480px;border-radius:50%}
+.hero .aurora::before{background:radial-gradient(circle,rgba(24,132,192,.5),transparent 62%);top:-10%;right:-6%;animation:aur1 17s ease-in-out infinite alternate}
+.hero .aurora::after{background:radial-gradient(circle,rgba(127,196,236,.32),transparent 60%);bottom:-16%;left:-10%;animation:aur2 21s ease-in-out infinite alternate}
+@keyframes aur1{to{transform:translate(-7%,9%) scale(1.14)}}
+@keyframes aur2{to{transform:translate(9%,-7%) scale(1.1)}}
+
+.scroll-cue{position:absolute;left:50%;bottom:122px;transform:translateX(-50%);z-index:3;width:30px;height:48px;border:2px solid rgba(255,255,255,.45);border-radius:17px;display:flex;justify-content:center;padding-top:9px;transition:border-color .2s ease}
+.scroll-cue:hover{border-color:var(--ouro-quente)}
+.scroll-cue span{width:4px;height:11px;border-radius:2px;background:var(--ouro-quente);animation:cue 1.9s ease-in-out infinite}
+@keyframes cue{0%,100%{transform:translateY(0);opacity:1}60%{transform:translateY(15px);opacity:0}}
+@media (max-width:720px){.scroll-cue{display:none}}
+
+a:focus-visible,button:focus-visible{outline:3px solid var(--ouro);outline-offset:3px;border-radius:6px}
+html{scrollbar-width:thin;scrollbar-color:var(--ceu) var(--gelo)}
+::-webkit-scrollbar{width:11px}
+::-webkit-scrollbar-track{background:var(--gelo)}
+::-webkit-scrollbar-thumb{background:var(--ceu);border-radius:8px;border:3px solid var(--gelo)}
+::-webkit-scrollbar-thumb:hover{background:var(--ouro)}
+
+.el-chip .big,.el-val,.num-value,.kpi .v{font-variant-numeric:tabular-nums}
+
+@media (prefers-reduced-motion: reduce){
+  .hero .aurora::before,.hero .aurora::after,.scroll-cue span{animation:none}
+}
 </style>
 </head>
 <body>
@@ -747,6 +784,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 
 <!-- ============ HERO ============ -->
 <section class="hero">
+  <div class="aurora" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="eyebrow eyebrow--on-dark rise d1" data-eyebrow-hero>Deputado Estadual · Rio de Janeiro</span>
@@ -787,6 +825,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
       </div>
     </div>
   </div>
+  <a class="scroll-cue" href="#eleicao" aria-label="Rolar para a eleição de 2026"><span></span></a>
   <div class="skyline" aria-hidden="true">
     <svg viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path fill="#081A30" d="M0,110 L0,66 L38,66 L38,46 L74,46 L74,72 L110,72 L110,38 L142,38 L142,60 L178,60 L178,44 L214,44 L214,76 L252,76 L252,52 L290,52 L290,30 L322,30 L322,58 L360,58 L360,70 L398,70 L398,42 L436,42 L436,64 L474,64 L474,36 L512,36 L512,68 L552,68 L552,50 L590,50 L590,26 L622,26 L622,54 L660,54 L660,72 L700,72 L700,44 L740,44 L740,62 L778,62 L778,34 L816,34 L816,66 L856,66 L856,48 L894,48 L894,70 L934,70 L934,40 L972,40 L972,58 L1012,58 L1012,28 L1046,28 L1046,56 L1086,56 L1086,74 L1126,74 L1126,46 L1166,46 L1166,64 L1206,64 L1206,36 L1246,36 L1246,60 L1286,60 L1286,50 L1326,50 L1326,68 L1368,68 L1368,44 L1408,44 L1408,72 L1440,72 L1440,110 Z"/>
@@ -1349,6 +1388,27 @@ var WHATSAPP_GABINETE = "5521999999999"; // DDI+DDD+número, só dígitos
     deck.addEventListener("mouseenter", function(){ advance(); start(); });
     deck.addEventListener("click", function(){ advance(); start(); });
     dots.forEach(function(d,i){ d.addEventListener("click", function(e){ e.stopPropagation(); go(i); start(); }); });
+  })();
+
+  /* scrollspy: o item do menu acompanha a secao visivel */
+  (function(){
+    var mapa = {};
+    document.querySelectorAll(".nav-links a[href^='#']").forEach(function(a){
+      mapa[a.getAttribute("href").slice(1)] = a;
+    });
+    var spy = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        var a = mapa[e.target.id];
+        if(a && e.isIntersecting){
+          document.querySelectorAll(".nav-links a.ativa").forEach(function(x){ x.classList.remove("ativa"); });
+          a.classList.add("ativa");
+        }
+      });
+    }, {rootMargin:"-38% 0px -55% 0px"});
+    Object.keys(mapa).forEach(function(id){
+      var sec = document.getElementById(id);
+      if(sec) spy.observe(sec);
+    });
   })();
 
   /* galeria da vitoria: aparece apenas quando as fotos estiverem na pasta */
