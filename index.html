@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rafael Nobre | Deputado Estadual · RJ</title>
-<meta name="description" content="Rafael Nobre, deputado estadual pelo Rio de Janeiro. Filho do Cabuís, em Nilópolis: o mais votado da história do município. Por Nilópolis, pela Baixada, pelo Rio de Janeiro.">
+<title>Rafael Nobre | Deputado Estadual Reeleito · RJ</title>
+<meta name="description" content="Rafael Nobre, deputado estadual reeleito em 2026 com 76.706 votos. Filho do Cabuís, em Nilópolis: o mais votado da história do município. Por Nilópolis, pela Baixada, pelo Rio de Janeiro.">
 <meta name="author" content="Gabinete do Deputado Estadual Rafael Nobre">
 <meta name="theme-color" content="#12406E">
 <link rel="canonical" href="https://paulolacke-afk.github.io/site-rafael-nobre/">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://paulolacke-afk.github.io/site-rafael-nobre/">
-<meta property="og:title" content="Rafael Nobre | Deputado Estadual · RJ">
-<meta property="og:description" content="Filho do Cabuís, em Nilópolis. Por Nilópolis, pela Baixada, pelo Rio de Janeiro.">
+<meta property="og:title" content="Rafael Nobre | Deputado Estadual Reeleito · RJ">
+<meta property="og:description" content="Reeleito em 2026 com 76.706 votos. Filho do Cabuís, em Nilópolis. Por Nilópolis, pela Baixada, pelo Rio de Janeiro.">
 <meta property="og:image" content="https://paulolacke-afk.github.io/site-rafael-nobre/assets/foto-oficial.jpg">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Rafael Nobre | Deputado Estadual · RJ">
+<meta name="twitter:title" content="Rafael Nobre | Deputado Estadual Reeleito · RJ">
 <meta name="twitter:image" content="https://paulolacke-afk.github.io/site-rafael-nobre/assets/foto-oficial.jpg">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Rafael Nobre","jobTitle":"Deputado Estadual do Rio de Janeiro","birthDate":"1983-04-15","birthPlace":"Nilópolis, Rio de Janeiro, Brasil","affiliation":{"@type":"Organization","name":"União Brasil"},"url":"https://rafaelnobre.com.br","image":"https://paulolacke-afk.github.io/site-rafael-nobre/assets/foto-oficial.jpg","sameAs":["https://www.instagram.com/rafaelnobre.rj/","https://www.facebook.com/rafaelnobre.rj/","https://x.com/rafaelnobre_rj","https://pt.wikipedia.org/wiki/Rafael_Nobre","https://www.alerj.rj.gov.br/Deputados/PerfilDeputado/489?Legislatura=20"]}
@@ -170,14 +170,6 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
 .skyline svg{display:block;width:100%;height:110px}
 
 /* selo do número — dormente até o modo campanha */
-.numero-urna{
-  display:none;margin-top:30px;max-width:330px;text-align:center;
-  background:var(--ouro);color:var(--marinho-profundo);border-radius:12px;padding:16px 24px 12px;
-  transform:rotate(-1.5deg);box-shadow:6px 6px 0 rgba(0,0,0,.35);
-}
-.numero-urna .rotulo{display:block;font-family:var(--cond);font-weight:700;font-size:13px;letter-spacing:.24em;text-transform:uppercase}
-.numero-urna .num{display:block;font-family:var(--anton);font-size:56px;line-height:1.05}
-body.campanha .numero-urna{display:block}
 
 /* hero load animation */
 .rise{opacity:0;transform:translateY(40px);animation:rise .9s cubic-bezier(.2,.7,.25,1) forwards}
@@ -618,6 +610,51 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
   .ticker-track{animation:none}
   .deck-card,.msg,.terr-word.spot,.feed-head .live i::after,.bolha,.fone-input .caret{animation:none!important}
 }
+
+/* ============ SELO REELEITO ============ */
+.hero-selo{display:inline-flex;align-items:center;gap:10px;margin:2px 0 18px;padding:9px 18px 8px;border-radius:999px;background:linear-gradient(120deg,#0E6B3C,#169A57);color:#fff;font-family:var(--cond);font-weight:700;font-size:17px;letter-spacing:.09em;text-transform:uppercase;box-shadow:0 10px 26px rgba(4,38,19,.45);position:relative;overflow:hidden}
+.hero-selo svg{width:17px;height:17px;flex:none}
+.hero-selo b{color:#FFE9AE;font-weight:700}
+.hero-selo::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent);animation:selo-shine 3.6s ease-in-out infinite}
+@keyframes selo-shine{0%,55%{left:-80%}85%,100%{left:130%}}
+
+/* ============ ELEIÇÃO 2026 ============ */
+.eleicao{position:relative;background:radial-gradient(1100px 520px at 85% -10%,#1A5292 0%,transparent 60%),linear-gradient(160deg,#0B2440,#12406E);padding:100px 0 96px;overflow:hidden}
+.eleicao::before{content:"76.706";position:absolute;right:-30px;bottom:-60px;font-family:var(--anton);font-size:clamp(120px,22vw,300px);color:rgba(255,255,255,.045);line-height:1;pointer-events:none}
+.el-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:end;margin-top:34px}
+.el-chart{display:flex;align-items:flex-end;gap:clamp(14px,3vw,30px);height:340px;padding:0 6px}
+.el-col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:10px;height:100%}
+.el-val{font-family:var(--cond);font-weight:700;font-size:clamp(16px,2vw,22px);color:#fff;opacity:0;transform:translateY(8px);transition:opacity .5s ease .95s,transform .5s ease .95s}
+.el-col.destaque .el-val{color:var(--ouro-quente);font-size:clamp(20px,2.4vw,28px)}
+.el-bar{flex:none;width:100%;max-width:120px;border-radius:10px 10px 4px 4px;background:linear-gradient(180deg,#5E8FC4,#2E6DB4);transform:scaleY(0);transform-origin:bottom;transition:transform 1.25s cubic-bezier(.22,.9,.26,1)}
+.el-col.destaque .el-bar{background:linear-gradient(180deg,var(--ouro-quente),var(--ouro));box-shadow:0 0 44px rgba(213,169,79,.4)}
+.el-chart.is-in .el-bar{transform:scaleY(1)}
+.el-chart.is-in .el-val{opacity:1;transform:none}
+.el-col:nth-child(2) .el-bar{transition-delay:.18s}
+.el-col:nth-child(3) .el-bar{transition-delay:.36s}
+.el-col:nth-child(4) .el-bar{transition-delay:.54s}
+.el-ano{font-family:var(--cond);font-weight:700;font-size:17px;letter-spacing:.12em;color:#AFD2EE}
+.el-cargo{font-size:12.5px;color:#7EA6CC;margin-top:-6px;text-align:center}
+.el-col.destaque .el-ano{color:#fff}
+.el-chips{display:grid;gap:14px}
+.el-chip{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(6px);border-radius:14px;padding:18px 22px;display:flex;align-items:baseline;gap:14px;transition:transform .25s ease,border-color .25s ease}
+.el-chip:hover{border-color:rgba(239,200,128,.5)}
+.el-chip .big{font-family:var(--anton);font-size:clamp(26px,3.4vw,40px);color:var(--ouro-quente);white-space:nowrap}
+.el-chip .big.ceu{color:var(--ceu-claro)}
+.el-chip p{font-size:15.5px;color:#C7D9EC;line-height:1.45}
+.el-fonte{margin-top:26px;font-size:13.5px;color:#7EA6CC}
+.eleicao .sec-lead{color:#B9CBE0}
+@media (max-width:900px){.el-grid{grid-template-columns:1fr;gap:40px}.el-chart{height:265px}.el-bar{max-width:90px}.el-col:nth-child(3) .el-bar{height:145px!important}.el-col.destaque .el-bar{height:215px!important}}
+
+/* tarja que "pinta" quando a seção entra */
+.reveal.is-in .tarja{animation:tarja-pop .65s cubic-bezier(.2,.9,.3,1.35) .12s backwards}
+@keyframes tarja-pop{0%{transform:rotate(-1.2deg) scale(.55);opacity:0}100%{transform:rotate(-1.2deg) scale(1);opacity:1}}
+@media (prefers-reduced-motion: reduce){
+  .hero-selo::after{animation:none}
+  .reveal.is-in .tarja{animation:none}
+  .el-bar{transform:scaleY(1);transition:none}
+  .el-val{opacity:1;transform:none;transition:none}
+}
 </style>
 </head>
 <body>
@@ -632,6 +669,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
     </a>
     <nav aria-label="Navegação principal">
       <ul class="nav-links">
+        <li><a href="#eleicao">Eleição 2026</a></li>
         <li><a href="#trajetoria">Trajetória</a></li>
         <li><a href="#projetos">Leis</a></li>
         <li><a href="#bandeiras">Bandeiras</a></li>
@@ -647,6 +685,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
   </div>
 </header>
 <div class="mobile-menu" id="mobileMenu">
+  <a href="#eleicao">Eleição 2026</a>
   <a href="#trajetoria">Trajetória</a>
   <a href="#projetos">Leis</a>
   <a href="#bandeiras">Bandeiras</a>
@@ -665,14 +704,11 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
         <span class="l2 rise d3">Nobre</span>
       </h1>
       <p class="hero-slogan rise d4">Por Nilópolis, pela Baixada, pelo Rio de Janeiro.</p>
-      <p class="hero-sub rise d4">Filho do Cabuís, em Nilópolis, Rafael Nobre é o deputado mais votado da história do município: leis em vigor que protegem crianças, mulheres e idosos, e recursos conquistados em Brasília e no Governo do Estado para a saúde e as obras da região.</p>
+      <p class="hero-selo rise d4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reeleito em 2026 · <b>76.706 votos</b></p>
+      <p class="hero-sub rise d4">Filho do Cabuís, em Nilópolis, Rafael Nobre foi reconduzido pelas urnas: 76.706 votos em 2026, quase 50% a mais que na eleição anterior. Leis em vigor que protegem crianças, mulheres e idosos — e recursos conquistados em Brasília e no Governo do Estado para a saúde e as obras da região.</p>
       <div class="hero-ctas rise d5">
         <a class="btn btn-gold" data-cta-hero href="#projetos">Conheça as leis</a>
         <a class="btn btn-ghost" href="https://www.instagram.com/rafaelnobre.rj/" target="_blank" rel="noopener">@rafaelnobre.rj</a>
-      </div>
-      <div class="numero-urna rise d5" aria-label="Número do candidato">
-        <span class="rotulo">Deputado estadual</span>
-        <span class="num" data-numero>00000</span>
       </div>
     </div>
     <div class="hero-photo rise d6">
@@ -685,8 +721,8 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
         </figure>
         <figure class="deck-card deck-card--brand">
           <svg class="coroa" viewBox="240 0 280 200" aria-hidden="true"><g stroke="#C79A3D" fill="none" stroke-width="10"><path d="M262 170 L286 40 L330 76"/><path d="M330 76 C 324 116, 330 146, 354 151 C 366 153, 372 145, 369 134"/><path d="M498 170 L474 40 L430 76"/><path d="M430 76 C 436 116, 430 146, 406 151 C 394 153, 388 145, 391 134"/><path d="M380 16 L424 60 L380 104 L336 60 Z"/><path d="M380 122 L398 140 L380 158 L362 140 Z" stroke-width="9"/></g></svg>
-          <span class="big">51.563</span>
-          <span class="lbl">votos em 2022 · o mais votado de Nilópolis</span>
+          <span class="big">76.706</span>
+          <span class="lbl">votos em 2026 · reeleito para o segundo mandato</span>
         </figure>
         <figure class="deck-card deck-card--brand gold">
           <span class="big">7 leis</span>
@@ -714,10 +750,53 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 <!-- ============ TICKER ============ -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
-    <span>Por Nilópolis <b>✦</b></span><span>Pela Baixada <b>✦</b></span><span>Pelo Rio de Janeiro <b>✦</b></span><span>Filho do Cabuís ❤ <b>✦</b></span><span>Educação <b>✦</b></span><span>Do Cabuís à Alerj <b>✦</b></span>
-    <span>Por Nilópolis <b>✦</b></span><span>Pela Baixada <b>✦</b></span><span>Pelo Rio de Janeiro <b>✦</b></span><span>Filho do Cabuís ❤ <b>✦</b></span><span>Educação <b>✦</b></span><span>Do Cabuís à Alerj <b>✦</b></span>
+    <span>Por Nilópolis <b>✦</b></span><span>Pela Baixada <b>✦</b></span><span>Pelo Rio de Janeiro <b>✦</b></span><span>Filho do Cabuís ❤ <b>✦</b></span><span>Educação <b>✦</b></span><span>Do Cabuís à Alerj <b>✦</b></span><span>Reeleito em 2026 <b>✦</b></span><span>76.706 votos de confiança <b>✦</b></span>
+    <span>Por Nilópolis <b>✦</b></span><span>Pela Baixada <b>✦</b></span><span>Pelo Rio de Janeiro <b>✦</b></span><span>Filho do Cabuís ❤ <b>✦</b></span><span>Educação <b>✦</b></span><span>Do Cabuís à Alerj <b>✦</b></span><span>Reeleito em 2026 <b>✦</b></span><span>76.706 votos de confiança <b>✦</b></span>
   </div>
 </div>
+
+<!-- ============ ELEIÇÃO 2026 ============ -->
+<section class="eleicao on-dark" id="eleicao">
+  <div class="wrap">
+    <span class="eyebrow eyebrow--gold reveal">Eleições 2026 · apuração encerrada</span>
+    <h2 class="sec-title reveal" data-delay="1">A resposta das <span class="tarja">urnas</span></h2>
+    <p class="sec-lead reveal" data-delay="2">Em 4 de outubro de 2026, o Rio de Janeiro reconduziu Rafael Nobre à Alerj com a maior votação da sua trajetória. De 2.773 votos em 2016 a 76.706 em 2026: cada eleição, um degrau a mais de confiança.</p>
+    <div class="el-grid">
+      <div class="el-chart reveal" role="img" aria-label="Evolução de votos: 2.773 em 2016, 4.020 em 2020, 51.563 em 2022 e 76.706 em 2026">
+        <div class="el-col">
+          <span class="el-val">2.773</span>
+          <div class="el-bar" style="height:12px"></div>
+          <span class="el-ano">2016</span>
+          <span class="el-cargo">vereador</span>
+        </div>
+        <div class="el-col">
+          <span class="el-val">4.020</span>
+          <div class="el-bar" style="height:17px"></div>
+          <span class="el-ano">2020</span>
+          <span class="el-cargo">vereador</span>
+        </div>
+        <div class="el-col">
+          <span class="el-val">51.563</span>
+          <div class="el-bar" style="height:195px"></div>
+          <span class="el-ano">2022</span>
+          <span class="el-cargo">dep. estadual</span>
+        </div>
+        <div class="el-col destaque">
+          <span class="el-val">76.706</span>
+          <div class="el-bar" style="height:290px"></div>
+          <span class="el-ano">2026</span>
+          <span class="el-cargo">reeleito</span>
+        </div>
+      </div>
+      <div class="el-chips">
+        <div class="el-chip reveal" data-delay="1"><span class="big">+48,8%</span><p>de crescimento sobre 2022: foram <b>25.143 votos a mais</b> na reeleição.</p></div>
+        <div class="el-chip reveal" data-delay="2"><span class="big ceu">70</span><p>cadeiras na Alerj — e Rafael Nobre entre os eleitos para a legislatura 2027–2031.</p></div>
+        <div class="el-chip reveal" data-delay="3"><span class="big">4×</span><p>aprovado nas urnas: duas vezes vereador recordista em Nilópolis, duas vezes deputado estadual pelo Rio.</p></div>
+      </div>
+    </div>
+    <p class="el-fonte reveal" data-delay="2">Fonte: apuração oficial do TSE — eleições de 4 de outubro de 2026. Novo mandato a partir de fevereiro de 2027.</p>
+  </div>
+</section>
 
 <!-- ============ NUMBERS ============ -->
 <section class="numbers">
@@ -726,8 +805,8 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
     <h2 class="sec-title reveal" data-delay="1">Trabalho que dá para <span class="tarja">medir</span></h2>
     <div class="num-grid">
       <div class="num-card reveal" data-delay="1">
-        <div class="num-value"><span class="counter" data-target="51563">0</span></div>
-        <div class="num-label">votos em 2022 — o mais votado de Nilópolis</div>
+        <div class="num-value"><span class="counter" data-target="76706">0</span></div>
+        <div class="num-label">votos em 2026 — reeleito para o segundo mandato</div>
       </div>
       <div class="num-card reveal" data-delay="2">
         <div class="num-value"><span class="counter" data-target="7">0</span></div>
@@ -742,7 +821,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
         <div class="num-label">comissões como titular na Alerj: Educação e Defesa Civil</div>
       </div>
     </div>
-    <p class="num-note reveal" data-delay="3">Fontes: <a href="https://www.alerj.rj.gov.br" target="_blank" rel="noopener">Alerj</a> e <a href="https://rafaelnobre.com.br" target="_blank" rel="noopener">site oficial do mandato</a>.</p>
+    <p class="num-note reveal" data-delay="3">Fontes: <a href="https://www.alerj.rj.gov.br" target="_blank" rel="noopener">Alerj</a> e <a href="https://rafaelnobre.com.br" target="_blank" rel="noopener">site oficial do mandato</a>; resultados eleitorais: apuração oficial do TSE (2026).</p>
   </div>
 </section>
 
@@ -762,6 +841,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
         <p>Rafael Nobre, 43 anos, nasceu e cresceu no <strong>Cabuís, em Nilópolis</strong>. Filho de Eduardo Nobre, motorista de ônibus, e de Alda Nobre, inspetora de alunos, aprendeu cedo o valor da palavra cumprida. É casado com a médica Dra. Michelle Nobre e pai de Vitória.</p>
         <p>Em 2016, foi eleito <strong>vereador mais votado de Nilópolis, com 2.773 votos</strong>. Quatro anos depois, o trabalho virou recorde: <strong>4.020 votos</strong>, a maior votação da história da cidade — e a presidência da Câmara Municipal, eleito por unanimidade.</p>
         <p>Em 2022, deu o passo seguinte: <strong>51.563 votos</strong> o levaram à Assembleia Legislativa do Rio, como o mais votado do município. Na Alerj, é titular das comissões de <strong>Educação</strong> e <strong>Defesa Civil</strong> e Segundo Vogal da Mesa Diretora. Em Brasília, conquistou <strong>emendas parlamentares para a saúde de Nilópolis</strong>; junto ao Governo do Estado, ajudou a garantir um dos maiores pacotes de obras já realizados no município.</p>
+        <p>Em outubro de 2026, as urnas confirmaram o caminho: <strong>reeleito com 76.706 votos</strong> — quase 50% a mais que em 2022 e a maior votação da sua trajetória. O segundo mandato na Alerj começa em fevereiro de 2027.</p>
       </div>
       <p class="bio-quote reveal" data-delay="3">Mandato bom é o que volta para a rua: em forma de lei, de obra e de cuidado com as pessoas.</p>
     </div>
@@ -798,6 +878,11 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
         <span class="tl-year">2022</span>
         <h3>Deputado estadual <span class="tl-votos">51.563 votos</span></h3>
         <p>O mais votado em Nilópolis. Na Alerj desde fevereiro de 2023, com atuação em Educação, Defesa Civil, proteção animal e defesa da Baixada.</p>
+      </li>
+      <li class="tl-item reveal" data-delay="5">
+        <span class="tl-year">2026</span>
+        <h3>Reeleito deputado estadual <span class="tl-votos">76.706 votos</span></h3>
+        <p>A maior votação da sua história, com crescimento de quase 50% sobre 2022. Reconduzido à Alerj para a legislatura 2027–2031.</p>
       </li>
     </ol>
   </div>
@@ -982,6 +1067,30 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
           <span class="nw-link">Ler no site oficial</span>
         </span>
       </a>
+      <a class="nw-card reveal" data-delay="1" href="https://rafaelnobre.com.br/posto-avancado-do-bpve-na-via-light-e-inaugurado-com-presenca-do-deputado-rafael-nobre-e-governador-claudio-castro/" target="_blank" rel="noopener">
+        <span class="nw-thumb"><img src="assets/news/bpve-via-light.jpg" alt="" loading="lazy"></span>
+        <span class="nw-body">
+          <span class="nw-tag">Segurança</span>
+          <h3>Posto Avançado do BPVE na Via Light é inaugurado ao lado do Governador</h3>
+          <span class="nw-link">Ler no site oficial</span>
+        </span>
+      </a>
+      <a class="nw-card reveal" data-delay="2" href="https://rafaelnobre.com.br/rafael-nobre-visita-obras-de-modernizacao-da-upa-de-nilopolis-e-anuncia-novos-equipamentos/" target="_blank" rel="noopener">
+        <span class="nw-thumb"><img src="assets/news/upa-nilopolis.jpg" alt="" loading="lazy"></span>
+        <span class="nw-body">
+          <span class="nw-tag">Saúde</span>
+          <h3>Obras de modernização da UPA de Nilópolis e novos equipamentos anunciados</h3>
+          <span class="nw-link">Ler no site oficial</span>
+        </span>
+      </a>
+      <a class="nw-card reveal" data-delay="3" href="https://rafaelnobre.com.br/lei-de-autoria-de-rafael-nobre-e-sancionada-e-cria-o-dia-do-artista-da-baixada-fluminense-no-calendario-oficial-do-estado/" target="_blank" rel="noopener">
+        <span class="nw-thumb"><img src="assets/news/artista-baixada.jpg" alt="" loading="lazy"></span>
+        <span class="nw-body">
+          <span class="nw-tag">Cultura</span>
+          <h3>Sancionada a lei que cria o “Dia do Artista da Baixada Fluminense”</h3>
+          <span class="nw-link">Ler no site oficial</span>
+        </span>
+      </a>
     </div>
     <div class="nw-all reveal">
       <a class="btn btn-gold" href="https://rafaelnobre.com.br" target="_blank" rel="noopener">Ver todas as notícias</a>
@@ -1042,7 +1151,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
     </div>
     <p class="ft-legal" data-legal>
       Página de divulgação do trabalho parlamentar do deputado estadual Rafael Nobre.
-      Não constitui propaganda eleitoral: não há pedido de voto nem divulgação de candidatura. #RafaelNobre
+      Resultados eleitorais citados conforme a apuração oficial do TSE (eleições de 4 de outubro de 2026). #RafaelNobre
     </p>
   </div>
 </footer>
@@ -1054,13 +1163,9 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 <script>
 /* =====================================================================
    CONFIGURAÇÃO — edite apenas este bloco.
-   MODO CAMPANHA: quando a propaganda eleitoral for liberada pela
-   Justiça Eleitoral, troque MODO_CAMPANHA para true e preencha
-   NUMERO_CANDIDATO. Antes disso, nunca publicar com o modo ligado.
+   Eleição de 2026 concluída: o modo campanha foi aposentado.
    ===================================================================== */
 var WHATSAPP_GABINETE = "5521999999999"; // DDI+DDD+número, só dígitos
-var MODO_CAMPANHA = false;
-var NUMERO_CANDIDATO = "00000";          // preencher só após a convenção partidária
 
 (function(){
   "use strict";
@@ -1071,17 +1176,6 @@ var NUMERO_CANDIDATO = "00000";          // preencher só após a convenção pa
   document.querySelectorAll("[data-zap]").forEach(function(a){
     a.href = "https://wa.me/" + WHATSAPP_GABINETE + "?text=" + zapMsg;
   });
-
-  /* modo campanha */
-  if (MODO_CAMPANHA) {
-    document.body.classList.add("campanha");
-    document.querySelector("[data-numero]").textContent = NUMERO_CANDIDATO;
-    document.querySelector("[data-eyebrow-hero]").textContent = "Candidato a Deputado Estadual · Rio de Janeiro";
-    document.querySelector("[data-cta-hero]").textContent = "Vote " + NUMERO_CANDIDATO;
-    document.querySelector("[data-legal]").textContent =
-      "Propaganda eleitoral. Eleições 2026. Rafael Nobre — deputado estadual, número " + NUMERO_CANDIDATO +
-      ". CNPJ da campanha e demais informações legais conforme registro na Justiça Eleitoral. #RafaelNobre";
-  }
 
   /* progress bar */
   var bar = document.getElementById("progress");
@@ -1177,6 +1271,20 @@ var NUMERO_CANDIDATO = "00000";          // preencher só após a convenção pa
     deck.addEventListener("mouseenter", function(){ advance(); start(); });
     deck.addEventListener("click", function(){ advance(); start(); });
     dots.forEach(function(d,i){ d.addEventListener("click", function(e){ e.stopPropagation(); go(i); start(); }); });
+  })();
+
+  /* ============ TILT 3D nos cards ============ */
+  (function(){
+    if(reduced || !window.matchMedia("(hover:hover)").matches) return;
+    document.querySelectorAll(".pl-card, .el-chip, .num-card").forEach(function(c){
+      c.addEventListener("mousemove", function(e){
+        var r = c.getBoundingClientRect();
+        var rx = ((e.clientY - r.top) / r.height - .5) * -6;
+        var ry = ((e.clientX - r.left) / r.width - .5) * 8;
+        c.style.transform = "perspective(700px) rotateX(" + rx + "deg) rotateY(" + ry + "deg) translateY(-4px)";
+      });
+      c.addEventListener("mouseleave", function(){ c.style.transform = ""; });
+    });
   })();
 
   /* ============ TERRITÓRIO / RAÍZES spotlight ============ */
