@@ -612,9 +612,9 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 }
 
 /* ============ SELO REELEITO ============ */
-.hero-selo{display:inline-flex;align-items:center;gap:10px;margin:2px 0 18px;padding:9px 18px 8px;border-radius:999px;background:linear-gradient(120deg,#0E6B3C,#169A57);color:#fff;font-family:var(--cond);font-weight:700;font-size:17px;letter-spacing:.09em;text-transform:uppercase;box-shadow:0 10px 26px rgba(4,38,19,.45);position:relative;overflow:hidden}
+.hero-selo{display:inline-flex;align-items:center;gap:10px;margin:2px 0 18px;padding:9px 18px 8px;border-radius:999px;background:linear-gradient(120deg,#0C5435,#127148);color:#fff;font-family:var(--cond);font-weight:700;font-size:17px;letter-spacing:.09em;text-transform:uppercase;box-shadow:0 10px 26px rgba(4,38,19,.45);position:relative;overflow:hidden}
 .hero-selo svg{width:17px;height:17px;flex:none}
-.hero-selo b{color:#FFE9AE;font-weight:700}
+.hero-selo b{color:#FFFFFF;font-weight:700}
 .hero-selo::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent);animation:selo-shine 3.6s ease-in-out infinite}
 @keyframes selo-shine{0%,55%{left:-80%}85%,100%{left:130%}}
 
@@ -624,10 +624,10 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 .el-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:end;margin-top:34px}
 .el-chart{display:flex;align-items:flex-end;gap:clamp(14px,3vw,30px);height:340px;padding:0 6px}
 .el-col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:10px;height:100%}
-.el-val{font-family:var(--cond);font-weight:700;font-size:clamp(16px,2vw,22px);color:#fff;opacity:0;transform:translateY(8px);transition:opacity .5s ease .95s,transform .5s ease .95s}
-.el-col.destaque .el-val{color:var(--ouro-quente);font-size:clamp(20px,2.4vw,28px)}
+.el-val{font-family:var(--cond);font-weight:700;font-size:clamp(16px,2vw,22px);color:#fff;opacity:0;transform:translateY(8px);transition:opacity .4s ease .25s,transform .4s ease .25s}
+.el-col.destaque .el-val{color:#FFFFFF;font-size:clamp(20px,2.4vw,28px)}
 .el-bar{flex:none;width:100%;max-width:120px;border-radius:10px 10px 4px 4px;background:linear-gradient(180deg,#5E8FC4,#2E6DB4);transform:scaleY(0);transform-origin:bottom;transition:transform 1.25s cubic-bezier(.22,.9,.26,1)}
-.el-col.destaque .el-bar{background:linear-gradient(180deg,var(--ouro-quente),var(--ouro));box-shadow:0 0 44px rgba(213,169,79,.4)}
+.el-col.destaque .el-bar{background:linear-gradient(180deg,#DCEDFB,#7EB2DD);box-shadow:0 0 44px rgba(175,210,238,.35)}
 .el-chart.is-in .el-bar{transform:scaleY(1)}
 .el-chart.is-in .el-val{opacity:1;transform:none}
 .el-col:nth-child(2) .el-bar{transition-delay:.18s}
@@ -638,9 +638,9 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 .el-col.destaque .el-ano{color:#fff}
 .el-chips{display:grid;gap:14px}
 .el-chip{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(6px);border-radius:14px;padding:18px 22px;display:flex;align-items:baseline;gap:14px;transition:transform .25s ease,border-color .25s ease}
-.el-chip:hover{border-color:rgba(239,200,128,.5)}
-.el-chip .big{font-family:var(--anton);font-size:clamp(26px,3.4vw,40px);color:var(--ouro-quente);white-space:nowrap}
-.el-chip .big.ceu{color:var(--ceu-claro)}
+.el-chip:hover{border-color:rgba(175,210,238,.55)}
+.el-chip .big{font-family:var(--anton);font-size:clamp(26px,3.4vw,40px);color:#CFE4F6;white-space:nowrap}
+.el-chip .big.ceu{color:#CFE4F6}
 .el-chip p{font-size:15.5px;color:#C7D9EC;line-height:1.45}
 .el-fonte{margin-top:26px;font-size:13.5px;color:#7EA6CC}
 .eleicao .sec-lead{color:#B9CBE0}
@@ -654,6 +654,36 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
   .reveal.is-in .tarja{animation:none}
   .el-bar{transform:scaleY(1);transition:none}
   .el-val{opacity:1;transform:none;transition:none}
+}
+
+/* ============ ANIMAÇÕES v2 ============ */
+/* pulso discreto na barra de 2026 depois que ela termina de crescer */
+.el-chart.is-in .el-col.destaque .el-bar{animation:barra-pulso 2.8s ease-in-out 2s 2}
+@keyframes barra-pulso{0%,100%{box-shadow:0 0 30px rgba(175,210,238,.25)}50%{box-shadow:0 0 64px rgba(175,210,238,.6)}}
+
+/* marca d'água 76.706 deriva lentamente */
+.eleicao::before{animation:marca-drift 16s ease-in-out infinite alternate}
+@keyframes marca-drift{from{transform:translateX(0)}to{transform:translateX(-40px)}}
+
+/* deck do hero flutua suavemente */
+.deck{animation:deck-float 7s ease-in-out infinite alternate}
+@keyframes deck-float{from{transform:translateY(0)}to{transform:translateY(-9px)}}
+
+/* linha da trajetória se desenha quando a seção entra */
+.tl-list::before{transform:scaleY(0);transform-origin:top;transition:transform 1.8s cubic-bezier(.22,.8,.3,1) .2s}
+#trajetoria.is-in .tl-list::before{transform:scaleY(1)}
+.tl-item::before{opacity:0;transform:scale(.3);transition:opacity .4s ease,transform .45s cubic-bezier(.2,.9,.3,1.4)}
+#trajetoria.is-in .tl-item::before{opacity:1;transform:scale(1)}
+#trajetoria.is-in .tl-item:nth-child(1)::before{transition-delay:.3s}
+#trajetoria.is-in .tl-item:nth-child(2)::before{transition-delay:.55s}
+#trajetoria.is-in .tl-item:nth-child(3)::before{transition-delay:.8s}
+#trajetoria.is-in .tl-item:nth-child(4)::before{transition-delay:1.05s}
+#trajetoria.is-in .tl-item:nth-child(5)::before{transition-delay:1.3s}
+#trajetoria.is-in .tl-item:nth-child(6)::before{transition-delay:1.55s}
+
+@media (prefers-reduced-motion: reduce){
+  .el-chart.is-in .el-col.destaque .el-bar,.eleicao::before,.deck{animation:none}
+  .tl-list::before,.tl-item::before{transform:none;opacity:1;transition:none}
 }
 </style>
 </head>
@@ -705,7 +735,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
       </h1>
       <p class="hero-slogan rise d4">Por Nilópolis, pela Baixada, pelo Rio de Janeiro.</p>
       <p class="hero-selo rise d4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reeleito em 2026 · <b>76.706 votos</b></p>
-      <p class="hero-sub rise d4">Filho do Cabuís, em Nilópolis, Rafael Nobre foi reconduzido pelas urnas: 76.706 votos em 2026, quase 50% a mais que na eleição anterior. Leis em vigor que protegem crianças, mulheres e idosos — e recursos conquistados em Brasília e no Governo do Estado para a saúde e as obras da região.</p>
+      <p class="hero-sub rise d4">Filho do Cabuís, em Nilópolis, Rafael Nobre foi reconduzido pelas urnas: 76.706 votos em 2026, 25.143 a mais que na eleição anterior. Leis em vigor que protegem crianças, mulheres e idosos — e recursos conquistados em Brasília e no Governo do Estado para a saúde e as obras da região.</p>
       <div class="hero-ctas rise d5">
         <a class="btn btn-gold" data-cta-hero href="#projetos">Conheça as leis</a>
         <a class="btn btn-ghost" href="https://www.instagram.com/rafaelnobre.rj/" target="_blank" rel="noopener">@rafaelnobre.rj</a>
@@ -758,31 +788,31 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 <!-- ============ ELEIÇÃO 2026 ============ -->
 <section class="eleicao on-dark" id="eleicao">
   <div class="wrap">
-    <span class="eyebrow eyebrow--gold reveal">Eleições 2026 · apuração encerrada</span>
-    <h2 class="sec-title reveal" data-delay="1">A resposta das <span class="tarja">urnas</span></h2>
+    <span class="eyebrow eyebrow--on-dark reveal">Eleições 2026 · apuração encerrada</span>
+    <h2 class="sec-title reveal" data-delay="1">A resposta das <span class="tarja tarja--ceu">urnas</span></h2>
     <p class="sec-lead reveal" data-delay="2">Em 4 de outubro de 2026, o Rio de Janeiro reconduziu Rafael Nobre à Alerj com a maior votação da sua trajetória. De 2.773 votos em 2016 a 76.706 em 2026: cada eleição, um degrau a mais de confiança.</p>
     <div class="el-grid">
       <div class="el-chart reveal" role="img" aria-label="Evolução de votos: 2.773 em 2016, 4.020 em 2020, 51.563 em 2022 e 76.706 em 2026">
         <div class="el-col">
-          <span class="el-val">2.773</span>
+          <span class="el-val counter" data-target="2773">0</span>
           <div class="el-bar" style="height:12px"></div>
           <span class="el-ano">2016</span>
           <span class="el-cargo">vereador</span>
         </div>
         <div class="el-col">
-          <span class="el-val">4.020</span>
+          <span class="el-val counter" data-target="4020">0</span>
           <div class="el-bar" style="height:17px"></div>
           <span class="el-ano">2020</span>
           <span class="el-cargo">vereador</span>
         </div>
         <div class="el-col">
-          <span class="el-val">51.563</span>
+          <span class="el-val counter" data-target="51563">0</span>
           <div class="el-bar" style="height:195px"></div>
           <span class="el-ano">2022</span>
           <span class="el-cargo">dep. estadual</span>
         </div>
         <div class="el-col destaque">
-          <span class="el-val">76.706</span>
+          <span class="el-val counter" data-target="76706">0</span>
           <div class="el-bar" style="height:290px"></div>
           <span class="el-ano">2026</span>
           <span class="el-cargo">reeleito</span>
@@ -841,7 +871,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
         <p>Rafael Nobre, 43 anos, nasceu e cresceu no <strong>Cabuís, em Nilópolis</strong>. Filho de Eduardo Nobre, motorista de ônibus, e de Alda Nobre, inspetora de alunos, aprendeu cedo o valor da palavra cumprida. É casado com a médica Dra. Michelle Nobre e pai de Vitória.</p>
         <p>Em 2016, foi eleito <strong>vereador mais votado de Nilópolis, com 2.773 votos</strong>. Quatro anos depois, o trabalho virou recorde: <strong>4.020 votos</strong>, a maior votação da história da cidade — e a presidência da Câmara Municipal, eleito por unanimidade.</p>
         <p>Em 2022, deu o passo seguinte: <strong>51.563 votos</strong> o levaram à Assembleia Legislativa do Rio, como o mais votado do município. Na Alerj, é titular das comissões de <strong>Educação</strong> e <strong>Defesa Civil</strong> e Segundo Vogal da Mesa Diretora. Em Brasília, conquistou <strong>emendas parlamentares para a saúde de Nilópolis</strong>; junto ao Governo do Estado, ajudou a garantir um dos maiores pacotes de obras já realizados no município.</p>
-        <p>Em outubro de 2026, as urnas confirmaram o caminho: <strong>reeleito com 76.706 votos</strong> — quase 50% a mais que em 2022 e a maior votação da sua trajetória. O segundo mandato na Alerj começa em fevereiro de 2027.</p>
+        <p>Em outubro de 2026, as urnas confirmaram o caminho: <strong>reeleito com 76.706 votos</strong>, 25.143 a mais que em 2022 — a maior votação da sua trajetória. O segundo mandato na Alerj começa em fevereiro de 2027.</p>
       </div>
       <p class="bio-quote reveal" data-delay="3">Mandato bom é o que volta para a rua: em forma de lei, de obra e de cuidado com as pessoas.</p>
     </div>
@@ -882,7 +912,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
       <li class="tl-item reveal" data-delay="5">
         <span class="tl-year">2026</span>
         <h3>Reeleito deputado estadual <span class="tl-votos">76.706 votos</span></h3>
-        <p>A maior votação da sua história, com crescimento de quase 50% sobre 2022. Reconduzido à Alerj para a legislatura 2027–2031.</p>
+        <p>A maior votação da sua história: 25.143 votos acima de 2022. Reconduzido à Alerj para a legislatura 2027–2031.</p>
       </li>
     </ol>
   </div>
@@ -1272,6 +1302,15 @@ var WHATSAPP_GABINETE = "5521999999999"; // DDI+DDD+número, só dígitos
     deck.addEventListener("click", function(){ advance(); start(); });
     dots.forEach(function(d,i){ d.addEventListener("click", function(e){ e.stopPropagation(); go(i); start(); }); });
   })();
+
+  /* secoes que disparam animacoes proprias ao entrar (linha da trajetoria) */
+  var secIO = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add("is-in"); secIO.unobserve(e.target); }
+    });
+  }, {threshold:.15});
+  var tl = document.getElementById("trajetoria");
+  if(tl) secIO.observe(tl);
 
   /* ============ TILT 3D nos cards ============ */
   (function(){
