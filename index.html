@@ -97,7 +97,9 @@ header.nav{
 }
 header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0,0,.25)}
 .nav-inner{max-width:var(--maxw);margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:28px}
-.nav-logo img{height:54px;width:auto;border-radius:8px}
+.nav-logo{text-decoration:none}
+.nav-marca{font-family:var(--anton);font-size:25px;letter-spacing:.05em;text-transform:uppercase;color:var(--branco);white-space:nowrap}
+.nav-marca b{color:var(--ouro-quente);font-weight:400}
 .nav-links{display:flex;gap:26px;margin-left:auto;list-style:none}
 .nav-links a{
   font-family:var(--cond);font-weight:600;font-size:16px;letter-spacing:.1em;
@@ -220,9 +222,7 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
   display:flex;align-items:center;justify-content:center;
 }
 .bio-photo .frame img.foto-auto{width:100%;height:100%;object-fit:cover;object-position:center 12%}
-.bio-photo .frame img.logo-fill{width:82%;object-fit:contain;display:none}
 .bio-photo .frame.sem-foto img.foto-auto{display:none}
-.bio-photo .frame.sem-foto img.logo-fill{display:block}
 .bio-photo::after{
   content:"";position:absolute;inset:auto -16px -16px auto;width:58%;height:58%;
   background:repeating-linear-gradient(45deg,var(--ouro) 0 6px,transparent 6px 14px);
@@ -493,7 +493,10 @@ header.nav.scrolled{background:rgba(11,36,64,.96);box-shadow:0 8px 30px rgba(0,0
 /* ============ FOOTER ============ */
 footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 .ft-grid{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
-.ft-logo img{height:72px;width:auto;border-radius:10px}
+.ft-logo{display:flex;flex-direction:column;gap:2px}
+.ft-marca{font-family:var(--anton);font-size:34px;letter-spacing:.05em;text-transform:uppercase;color:var(--branco);line-height:1}
+.ft-marca b{color:var(--ouro-quente);font-weight:400}
+.ft-cargo{font-family:var(--cond);font-weight:600;font-size:13.5px;letter-spacing:.18em;text-transform:uppercase;color:#7E97B4}
 .ft-links{display:flex;gap:22px;flex-wrap:wrap}
 .ft-links a{font-family:var(--cond);font-weight:600;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:#C7D4E4;text-decoration:none}
 .ft-links a:hover{color:var(--ouro-quente)}
@@ -561,7 +564,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
   .pl-grid,.bd-grid{grid-template-columns:repeat(2,1fr)}
   .bio-grid,.ct-grid{grid-template-columns:1fr;gap:44px}
   .nav-links,.nav-cta{display:none}
-  .nav-logo img{height:46px}
+  .nav-marca{font-size:21px}
   .burger{display:block}
   .mobile-menu{
     display:flex;position:fixed;inset:0;background:var(--marinho-profundo);z-index:890;
@@ -601,7 +604,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
   .ct-cards .ct-card{padding:16px 18px}
   .ft-grid,.ft-links{justify-content:center;text-align:center}
   .ft-note{justify-content:center;text-align:center}
-  .ft-logo img{height:58px}
+  .ft-marca{font-size:28px}
   .wa-fab{width:54px;height:54px;right:16px;bottom:16px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -720,7 +723,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 <header class="nav" id="topo">
   <div class="nav-inner">
     <a class="nav-logo" href="#topo" aria-label="Rafael Nobre, início">
-      <img src="assets/logo-oficial.png" alt="Rafael Nobre, Deputado Estadual">
+      <span class="nav-marca">Rafael <b>Nobre</b></span>
     </a>
     <nav aria-label="Navegação principal">
       <ul class="nav-links">
@@ -771,32 +774,26 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
         <figure class="deck-card">
           <!-- FOTO OFICIAL: salve assets/foto-oficial.jpg que ela entra sozinha -->
           <img class="foto-auto" src="assets/foto-oficial.jpg" alt="Rafael Nobre, Deputado Estadual" fetchpriority="high" onerror="this.closest('.deck-card').classList.add('sem-foto')">
-          <span class="logo-fill" aria-hidden="true"><img src="assets/logo-oficial.png" alt=""></span>
           <div class="cap"><b>Rafael Nobre</b><span>Deputado Estadual · Rio de Janeiro</span></div>
         </figure>
         <figure class="deck-card">
           <img class="foto-auto" src="assets/foto-festa.jpg" alt="Rafael Nobre comemora a reeleição sob os fogos no Cabuís" loading="lazy" onerror="this.closest('.deck-card').classList.add('sem-foto')">
-          <span class="logo-fill" aria-hidden="true"><img src="assets/logo-oficial.png" alt=""></span>
           <div class="cap"><b>76.706 votos</b><span>A festa da reeleição no Cabuís · 4 de outubro</span></div>
         </figure>
         <figure class="deck-card">
           <img class="foto-auto" src="assets/foto-frontal.jpg" alt="Rafael Nobre" loading="lazy" onerror="this.closest('.deck-card').classList.add('sem-foto')">
-          <span class="logo-fill" aria-hidden="true"><img src="assets/logo-oficial.png" alt=""></span>
           <div class="cap"><b>Reeleito</b><span>76.706 votos · segundo mandato na Alerj</span></div>
         </figure>
         <figure class="deck-card">
           <img class="foto-auto" src="assets/foto-terno.jpg" alt="Rafael Nobre de terno entre as bandeiras do Brasil e do Rio de Janeiro" loading="lazy" onerror="this.closest('.deck-card').classList.add('sem-foto')">
-          <span class="logo-fill" aria-hidden="true"><img src="assets/logo-oficial.png" alt=""></span>
           <div class="cap"><b>Do Cabuís</b><span>à Alerj — sem esquecer de onde veio</span></div>
         </figure>
         <figure class="deck-card">
           <img class="foto-auto" src="assets/foto-posse.jpg" alt="Rafael Nobre assina o livro de posse na Alerj" loading="lazy" onerror="this.closest('.deck-card').classList.add('sem-foto')">
-          <span class="logo-fill" aria-hidden="true"><img src="assets/logo-oficial.png" alt=""></span>
           <div class="cap"><b>Posse na Alerj</b><span>Mandato a serviço de Nilópolis e da Baixada</span></div>
         </figure>
         <figure class="deck-card">
           <img class="foto-auto" src="assets/foto-compromisso.jpg" alt="Rafael Nobre de terno cinza no plenário" loading="lazy" onerror="this.closest('.deck-card').classList.add('sem-foto')">
-          <span class="logo-fill" aria-hidden="true"><img src="assets/logo-oficial.png" alt=""></span>
           <div class="cap"><b>Compromisso</b><span>Ouvir, agir e transformar demandas em conquistas</span></div>
         </figure>
       </div>
@@ -905,7 +902,6 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
     <div class="bio-photo reveal">
       <div class="frame">
         <img class="foto-auto" src="assets/foto-plenario.jpg" alt="Rafael Nobre sorrindo em sua cadeira no plenário da Alerj" loading="lazy" style="object-position:center 30%" onerror="this.closest('.frame').classList.add('sem-foto')">
-        <img class="logo-fill" src="assets/logo-oficial.png" alt="Rafael Nobre">
       </div>
     </div>
     <div>
@@ -1233,7 +1229,7 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 <footer class="rodape">
   <div class="wrap">
     <div class="ft-grid">
-      <div class="ft-logo"><img src="assets/logo-oficial.png" alt="Rafael Nobre, Deputado Estadual"></div>
+      <div class="ft-logo"><span class="ft-marca">Rafael <b>Nobre</b></span><span class="ft-cargo">Deputado Estadual · Rio de Janeiro</span></div>
       <nav class="ft-links" aria-label="Links do rodapé">
         <a href="https://rafaelnobre.com.br" target="_blank" rel="noopener">Site do mandato</a>
         <a href="https://www.instagram.com/rafaelnobre.rj/" target="_blank" rel="noopener">Instagram</a>
