@@ -690,8 +690,12 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
 /* ============ CONQUISTAS ============ */
 .conquistas{background:var(--gelo);padding:96px 0}
 .cq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:42px}
-.cq-card{background:var(--branco);border:1px solid #E2EAF2;border-left:5px solid var(--ouro);border-radius:12px;padding:18px 20px 16px;transition:transform .22s ease,box-shadow .22s ease}
+.cq-card{background:var(--branco);border:1px solid #E2EAF2;border-left:5px solid var(--ouro);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .22s ease,box-shadow .22s ease}
 .cq-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(34,48,108,.12)}
+.cq-thumb{display:block;aspect-ratio:16/10;overflow:hidden;background:var(--ceu-claro)}
+.cq-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.cq-card:hover .cq-thumb img{transform:scale(1.06)}
+.cq-corpo{padding:13px 18px 16px}
 .cq-tag{font-family:var(--cond);font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ouro)}
 .cq-card h3{font-family:var(--cond);font-weight:700;font-size:19.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--marinho-profundo);margin:6px 0 6px;line-height:1.2}
 .cq-card p{font-size:14.5px;color:var(--tinta-suave);line-height:1.5}
@@ -775,14 +779,15 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
           <span class="big">76.706</span>
           <span class="lbl">votos em 2026 · reeleito para o segundo mandato</span>
         </figure>
-        <figure class="deck-card deck-card--brand gold">
-          <span class="big">23</span>
-          <span class="lbl">projetos e leis pelo Rio — da moradia acessível à Casa do Autista</span>
+        <figure class="deck-card">
+          <img class="foto-auto" src="assets/foto-frontal.jpg" alt="Rafael Nobre" loading="lazy" onerror="this.closest('.deck-card').classList.add('sem-foto')">
+          <span class="logo-fill" aria-hidden="true"><img src="assets/logo-oficial.png" alt=""></span>
+          <div class="cap"><b>Reeleito</b><span>76.706 votos · segundo mandato na Alerj</span></div>
         </figure>
-        <figure class="deck-card deck-card--brand">
-          <svg class="coroa" viewBox="240 0 280 200" aria-hidden="true"><g stroke="#7EC8F5" fill="none" stroke-width="10"><path d="M262 170 L286 40 L330 76"/><path d="M330 76 C 324 116, 330 146, 354 151 C 366 153, 372 145, 369 134"/><path d="M498 170 L474 40 L430 76"/><path d="M430 76 C 436 116, 430 146, 406 151 C 394 153, 388 145, 391 134"/><path d="M380 16 L424 60 L380 104 L336 60 Z"/><path d="M380 122 L398 140 L380 158 L362 140 Z" stroke-width="9"/></g></svg>
-          <span class="big">Do Cabuís</span>
-          <span class="lbl">à Alerj — sem esquecer de onde veio</span>
+        <figure class="deck-card">
+          <img class="foto-auto" src="assets/foto-bracos.jpg" alt="Rafael Nobre de braços cruzados" loading="lazy" onerror="this.closest('.deck-card').classList.add('sem-foto')">
+          <span class="logo-fill" aria-hidden="true"><img src="assets/logo-oficial.png" alt=""></span>
+          <div class="cap"><b>Do Cabuís</b><span>à Alerj — sem esquecer de onde veio</span></div>
         </figure>
       </div>
       <div class="deck-dots" aria-hidden="true">
@@ -1010,18 +1015,19 @@ footer.rodape{background:#071729;color:#9FB2C8;padding:52px 0 40px}
     <h2 class="sec-title reveal" data-delay="1">Trabalho que virou <span class="tarja">conquista</span></h2>
     <p class="sec-lead reveal" data-delay="2">Investimentos, obras e programas conquistados com articulação em Brasília e no Governo do Estado — para Nilópolis e toda a Baixada Fluminense.</p>
     <div class="cq-grid">
-      <div class="cq-card reveal" data-delay="1"><span class="cq-tag">Saúde</span><h3>Hospital e Maternidade JK reaberto</h3><p>Atendimentos de volta, maternidade devolvida à população, CTI implantado e cirurgias eletivas em funcionamento.</p></div>
-      <div class="cq-card reveal" data-delay="2"><span class="cq-tag">Saúde</span><h3>UPA do Cabuís modernizada</h3><p>Emenda de R$ 3,5 milhões: tomógrafo de 128 canais e oferta de exames de colonoscopia e endoscopia.</p></div>
-      <div class="cq-card reveal" data-delay="3"><span class="cq-tag">Saúde</span><h3>Van para transporte de pacientes</h3><p>Van climatizada para 16 passageiros, conquistada por emenda parlamentar, com mais conforto e segurança.</p></div>
-      <div class="cq-card reveal" data-delay="1"><span class="cq-tag">Mobilidade</span><h3>Via Light revitalizada</h3><p>Recapeamento, contenção de encostas, iluminação em LED, novos pontos de ônibus e passarelas reformadas.</p></div>
-      <div class="cq-card reveal" data-delay="2"><span class="cq-tag">Segurança</span><h3>BPVE na Via Light</h3><p>Posto avançado inaugurado e policiamento reforçado em uma das principais vias da Baixada Fluminense.</p></div>
-      <div class="cq-card reveal" data-delay="3"><span class="cq-tag">Alimentação</span><h3>Restaurante do Povo</h3><p>2 mil refeições por dia em Nilópolis — café da manhã, almoço e jantar por R$ 0,50 e R$ 1,00.</p></div>
-      <div class="cq-card reveal" data-delay="1"><span class="cq-tag">Alimentação</span><h3>Café do Trabalhador</h3><p>Café da manhã completo por R$ 0,50 para quem sai cedo: café ou café com leite, pão com manteiga e fruta.</p></div>
-      <div class="cq-card reveal" data-delay="2"><span class="cq-tag">Defesa Civil</span><h3>68 obras de contenção de encostas</h3><p>Tranquilidade devolvida às famílias e mais segurança nas áreas de risco de Nilópolis.</p></div>
-      <div class="cq-card reveal" data-delay="3"><span class="cq-tag">Meio ambiente</span><h3>Limpeza e dragagem dos rios</h3><p>Rios Pavuna e Sarapuí desassoreados, reduzindo o risco de alagamentos em Nilópolis e região.</p></div>
-      <div class="cq-card reveal" data-delay="1"><span class="cq-tag">Defesa Civil</span><h3>Reforço na barragem do Gericinó</h3><p>Estrutura reforçada e capacidade de escoamento ampliada: mais proteção contra enchentes.</p></div>
-      <div class="cq-card reveal" data-delay="2"><span class="cq-tag">Mobilidade</span><h3>Recapeamento e calçamento</h3><p>Asfalto novo, pintura viária e calçadas revitalizadas em diversos bairros, com mais mobilidade e segurança.</p></div>
-      <div class="cq-card reveal" data-delay="3"><span class="cq-tag">Educação</span><h3>FAETEC de Nilópolis reaberta</h3><p>Depois de sete anos fechada, a unidade voltou a oferecer cursos gratuitos de qualificação profissional.</p></div>
+      <div class="cq-card reveal" data-delay="1"><span class="cq-thumb"><img src="assets/conquistas/hospital-jk.jpg" alt="Vista aérea do Hospital Municipal Juscelino Kubitschek reaberto" loading="lazy"></span><div class="cq-corpo"><span class="cq-tag">Saúde</span><h3>Hospital e Maternidade JK reaberto</h3><p>Atendimentos de volta, maternidade devolvida à população, CTI implantado e cirurgias eletivas em funcionamento.</p></div></div>
+      <div class="cq-card reveal" data-delay="2"><span class="cq-thumb"><img src="assets/conquistas/upa-cabuis.jpg" alt="Tomógrafo de 128 canais instalado na UPA do Cabuís" loading="lazy"></span><div class="cq-corpo"><span class="cq-tag">Saúde</span><h3>UPA do Cabuís modernizada</h3><p>Emenda de R$ 3,5 milhões: tomógrafo de 128 canais e oferta de exames de colonoscopia e endoscopia.</p></div></div>
+      <div class="cq-card reveal" data-delay="3"><span class="cq-thumb"><img src="assets/conquistas/van-pacientes.jpg" alt="Van da Saúde de Nilópolis para transporte de pacientes" loading="lazy"></span><div class="cq-corpo"><span class="cq-tag">Saúde</span><h3>Van para transporte de pacientes</h3><p>Van climatizada para 16 passageiros, conquistada por emenda parlamentar, com mais conforto e segurança.</p></div></div>
+      <div class="cq-card reveal" data-delay="1"><span class="cq-thumb"><img src="assets/conquistas/via-light.jpg" alt="Via Light revitalizada vista do alto" loading="lazy"></span><div class="cq-corpo"><span class="cq-tag">Mobilidade</span><h3>Via Light revitalizada</h3><p>Recapeamento, contenção de encostas, iluminação em LED, novos pontos de ônibus e passarelas reformadas.</p></div></div>
+      <div class="cq-card reveal" data-delay="2"><span class="cq-thumb"><img src="assets/conquistas/bpve.jpg" alt="Viaturas no Posto Avançado do BPVE na Via Light" loading="lazy"></span><div class="cq-corpo"><span class="cq-tag">Segurança</span><h3>BPVE na Via Light</h3><p>Posto avançado inaugurado e policiamento reforçado em uma das principais vias da Baixada Fluminense.</p></div></div>
+      <div class="cq-card reveal" data-delay="3"><span class="cq-thumb"><img src="assets/conquistas/restaurante-povo.jpg" alt="Refeições servidas no Restaurante do Povo" loading="lazy"></span><div class="cq-corpo"><span class="cq-tag">Alimentação</span><h3>Restaurante do Povo</h3><p>2 mil refeições por dia em Nilópolis — café da manhã, almoço e jantar por R$ 0,50 e R$ 1,00.</p></div></div>
+      <div class="cq-card reveal" data-delay="1"><span class="cq-thumb"><img src="assets/conquistas/cafe-trabalhador.jpg" alt="Fachada do Café do Trabalhador em Nilópolis" loading="lazy"></span><div class="cq-corpo"><span class="cq-tag">Alimentação</span><h3>Café do Trabalhador</h3><p>Café da manhã completo por R$ 0,50 para quem sai cedo: café ou café com leite, pão com manteiga e fruta.</p></div></div>
+      <div class="cq-card reveal" data-delay="2"><span class="cq-thumb"><img src="assets/conquistas/encostas.jpg" alt="Obra de contenção de encosta em área de risco" loading="lazy"></span><div class="cq-corpo"><span class="cq-tag">Defesa Civil</span><h3>68 obras de contenção de encostas</h3><p>Tranquilidade devolvida às famílias e mais segurança nas áreas de risco de Nilópolis.</p></div></div>
+      <div class="cq-card reveal" data-delay="3"><span class="cq-thumb"><img src="assets/conquistas/dragagem.jpg" alt="Escavadeira na dragagem do rio" loading="lazy"></span><div class="cq-corpo"><span class="cq-tag">Meio ambiente</span><h3>Limpeza e dragagem dos rios</h3><p>Rios Pavuna e Sarapuí desassoreados, reduzindo o risco de alagamentos em Nilópolis e região.</p></div></div>
+      <div class="cq-card reveal" data-delay="1"><span class="cq-thumb"><img src="assets/conquistas/gericino.jpg" alt="Barragem do Gericinó vista do alto" loading="lazy"></span><div class="cq-corpo"><span class="cq-tag">Defesa Civil</span><h3>Reforço na barragem do Gericinó</h3><p>Estrutura reforçada e capacidade de escoamento ampliada: mais proteção contra enchentes.</p></div></div>
+      <div class="cq-card reveal" data-delay="2"><span class="cq-thumb"><img src="assets/conquistas/recapeamento.jpg" alt="Máquinas aplicando asfalto novo em rua de Nilópolis" loading="lazy"></span><div class="cq-corpo"><span class="cq-tag">Mobilidade</span><h3>Recapeamento e calçamento</h3><p>Asfalto novo, pintura viária e calçadas revitalizadas em diversos bairros, com mais mobilidade e segurança.</p></div></div>
+      <div class="cq-card reveal" data-delay="3"><span class="cq-thumb"><img src="assets/conquistas/faetec.jpg" alt="Salas da FAETEC de Nilópolis reabertas" loading="lazy"></span><div class="cq-corpo"><span class="cq-tag">Educação</span><h3>FAETEC de Nilópolis reaberta</h3><p>Depois de sete anos fechada, a unidade voltou a oferecer cursos gratuitos de qualificação profissional.</p></div></div>
+    </div>
     </div>
   </div>
 </section>
